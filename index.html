@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Metadados básicos da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba do navegador -->
+    <title>Portfólio – Nathaly Marques</title>
+
+    <!-- Estilos principais do site -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--
+        LAYOUT PRINCIPAL
+        Estrutura em duas colunas:
+        - Aside (painel esquerdo) com informações pessoais
+        - Section (painel direito) com abas de conteúdo
+    -->
+    <main class="layout">
+        <!--
+            PAINEL ESQUERDO
+            Contém identidade visual, resumo profissional, linha do tempo,
+            ferramentas utilizadas e formas de contato.
+        -->
+        <aside class="left-panel">
+
+            <!-- Avatar ilustrativo (pode ser substituído por uma foto real futuramenjte) -->
+            <div class="avatar">
+            </div>
+
+            <!-- Nome e descrição curta do papel profissional -->
+            <h1 class="name">Isabely Marques</h1>
+            <p class="role">Estudante de Engenharia de Software</p>
+
+            <!-- Localização geográfica -->
+            <div class="location-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                    id="Interface-Essential-Global-Public--Streamline-Pixel" height="15" width="15">
+                    <desc>
+                        Interface Essential Global Public Streamline Icon: https://streamlinehq.com
+                    </desc>
+                    <title>interface-essential-global-public</title>
+                    <g>
+                        <path
+                            d="m22.85 7.62 0 3.05 -1.52 0 0 4.57 1.52 0 0 1.52 1.53 0 0 1.53 -4.57 0 0 1.52 -1.53 0 0 1.52 4.57 0 0 3.05 -1.52 0 0 3.05 1.52 0 0 1.52 3.05 0 0 -1.52 1.53 0 0 -1.53 1.52 0 0 -3.04 1.52 0 0 -3.05 1.53 0 0 -7.62 -1.53 0 0 -3.05 -1.52 0 0 -3.04 -1.52 0 0 1.52 -4.58 0z"
+                            fill="#000000" stroke-width="1"></path>
+                        <path d="M25.9 4.57h1.53V6.1H25.9Z" fill="#000000" stroke-width="1"></path>
+                        <path d="M22.85 3.05h3.05v1.52h-3.05Z" fill="#000000" stroke-width="1"></path>
+                        <path d="M19.81 28.95h3.04v1.53h-3.04Z" fill="#000000" stroke-width="1"></path>
+                        <path d="M19.81 1.52h3.04v1.53h-3.04Z" fill="#000000" stroke-width="1"></path>
+                        <path
+                            d="m16.76 28.95 -1.52 0 0 -1.52 -4.58 0 0 1.52 -1.52 0 0 1.53 3.05 0 0 1.52 7.62 0 0 -1.52 -3.05 0 0 -1.53z"
+                            fill="#000000" stroke-width="1"></path>
+                        <path d="M12.19 0h7.62v1.52h-7.62Z" fill="#000000" stroke-width="1"></path>
+                        <path d="m10.66 16.76 1.53 0 0 1.53 1.52 0 0 -4.58 -3.05 0 0 3.05z" fill="#000000"
+                            stroke-width="1"></path>
+                        <path d="M6.09 27.43h3.05v1.52H6.09Z" fill="#000000" stroke-width="1"></path>
+                        <path d="M4.57 25.9h1.52v1.53H4.57Z" fill="#000000" stroke-width="1"></path>
+                        <path
+                            d="m3.05 22.86 0 3.04 1.52 0 0 -1.52 1.52 0 0 -1.52 1.53 0 0 -4.57 -1.53 0 0 -1.53 -1.52 0 0 -1.52 -1.52 0 0 -1.53 1.52 0 0 -1.52 4.57 0 0 -1.52 1.52 0 0 -1.53 1.53 0 0 1.53 1.52 0 0 -1.53 1.53 0 0 -3.04 -1.53 0 0 -1.53 -3.05 0 0 -1.52 1.53 0 0 -1.53 -3.05 0 0 1.53 -3.05 0 0 1.52 -1.52 0 0 1.53 -1.52 0 0 3.04 -1.53 0 0 3.05 -1.52 0 0 7.62 1.52 0 0 3.05 1.53 0z"
+                            fill="#000000" stroke-width="1"></path>
+                    </g>
+                </svg>
+                <span>São Paulo, Brasil</span>
+            </div>
+
+            <!-- Mini bio: resumo do posicionamento profissional -->
+            <p class="mini-bio">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum excepturi, fugiat 
+
+            <!-- Frase de efeito / tagline profissional -->
+            <p class="tagline">
+                “Criando pontes entre pessoas, processos e soluções.”
+            </p>
+
+            <!-- Status atual de disponibilidade -->
+            <div class="status-pill">
+                <span
+                    style="width: 10px; height: 10px; background-color: white; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
+                Disponível para novos projetos
+            </div>
+
+            <!--
+                LINHA DO TEMPO PROFISSIONAL
+                Resumo cronológico da trajetória, em formato minimalista.
+            -->
+            <div class="info-block">
+                <h3 class="block-title">Linha do tempo</h3>
+
+                <div class="timeline-vertical">
+
+                    <!-- Período de atuação em ambientes operacionais -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2012–2023</span>
+                            <p class="timeline-text">Experiência em ambientes operacionais.</p>
+                        </div>
+                    </div>gg
+
+                    <!-- Transição para dados e inovação -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023–atual</span>
+                            <p class="timeline-text">Transição para dados e inovação.</p>
+                        </div>
+                    </div>
+
+                    <!-- Momento atual de foco em soluções digitais -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Hoje</span>
+                            <p class="timeline-text">Desenvolvimento de soluções digitais.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--
+                FERRAMENTAS UTILIZADAS
+                Destaque para as principais ferramentas do dia a dia.
+            -->
+            <div class="info-block">
+                <h3 class="block-title">Ferramentas que uso</h3>
+                <div class="tools-badges">
+                    <span class="tool-pill">Power BI</span>
+                    <span class="tool-pill">Excel / Planilhas</span>
+                    <span class="tool-pill">GitHub</span>
+                    <span class="tool-pill">VS Code</span>
+                    <span class="tool-pill">Notion</span>
+                    <span class="tool-pill">Miro / Whiteboards</span>
+                </div>
+            </div>
+
+            <!--
+                CONTATO
+                Links para redes profissionais e repositórios de código.
+            -->
+            <div class="contact-box">
+                <h3 class="block-title">Contato</h3>
+                <ul class="contact-list">
+                    <!-- Link para o perfil do LinkedIn -->
+                    <li>
+                        <a href="https://www.linkedin.com/in/nathaly-marques-34733b151" target="_blank"
+                            class="btn-social linkedin">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="currentColor" aria-hidden="true">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" />
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+
+                    <!-- Link para repositório GitHub (pode ser atualizado com a URL real) -->
+                    <li>
+                        <a href="" class="btn-social github">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="currentColor" aria-hidden="true">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" />
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </aside>
+
+
+        <!--
+            PAINEL DIREITO
+            Conteúdo principal dividido por abas:
+            - Sobre Mim
+            - Formação
+            - Portfólio
+            - Contato
+        -->
+        <section class="right-panel">
+            <!-- Navegação por abas (tabs) -->
+            <div class="tab-container">
+                <div class="tabs">
+                    <button class="tab active" data-target="sobre">Sobre Mim</button>
+                    <button class="tab" data-target="formacao">Formação</button>
+                    <button class="tab" data-target="portfolio">Portfólio</button>
+                    <button class="tab" data-target="contato">Contato</button>
+                </div>
+            </div>
+
+            <!--
+                SEÇÃO: SOBRE MIM
+                Texto mais detalhado e humanizado sobre trajetória e foco atual.
+            -->
+            <section id="sobre" class="content-section">
+                <h2>Sobre Mim</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda ullam a nihil obcaecati ad
+                    voluptatibus voluptas eos quasi eaque, optio nostrum tempore eveniet impedit ratione quis rerum,
+                    autem ipsa corporis.
+                </p>
+
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi omnis eligendi, perspiciatis
+                    voluptatum ullam blanditiis tenetur cumque ducimus officia quia quo quasi aperiam, animi aspernatur,
+                    impedit itaque iusto inventore provident?
+                </p>
+
+                <!-- Destaques em formato de métricas/resumo visual -->
+                <div class="sobre-metric-grid">
+                    <div class="sobre-metric">
+                        <span class="metric-number">10+</span>
+                        <span class="metric-label">anos de vivência prática em operações</span>
+                    </div>
+                    <div class="sobre-metric">
+                        <span class="metric-number">2</span>
+                        <span class="metric-label">áreas conectadas: processos e dados</span>
+                    </div>
+                    <div class="sobre-metric">
+                        <span class="metric-number">1</span>
+                        <span class="metric-label">foco principal: soluções que fazem sentido</span>
+                    </div>
+                </div>
+
+                <!-- Subtópicos em duas colunas: estilo de trabalho e foco atual -->
+                <div class="sobre-layout">
+                    <div class="sobre-coluna">
+                        <h3 class="subheading">Como trabalho</h3>
+                        <ul class="about-list">
+                            <li>Observo o contexto antes de sugerir soluções.</li>
+                            <li>Busco simplificar sem perder informação importante.</li>
+                            <li>Valorizo processos claros, organizados e replicáveis.</li>
+                            <li>Aprendo rápido e gosto de testar novas abordagens.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sobre-coluna">
+                        <h3 class="subheading">Atualmente focada em</h3>
+                        <ul class="about-list">
+                            <li>Transição para inovação e análise de dados.</li>
+                            <li>Construção de soluções digitais aplicadas a processos reais.</li>
+                            <li>Organização de informações para apoiar decisões melhores.</li>
+                            <li>Desenvolvimento do meu portfólio e presença digital.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--
+                SEÇÃO: FORMAÇÃO
+                Histórico educacional estruturado por níveis e instituições.
+            -->
+            <section id="formacao" class="content-section active">
+                <h2>Formação</h2>
+
+                <ul class="education-list">
+
+                    <!-- Curso superior em Ciência de Dados -->
+                    <li class="education-item">
+                        <strong>Ciência de Dados</strong> — UNINTER Centro Universitário Internacional<br>
+                        Início: Fevereiro/2025 · Previsão de conclusão: Julho/2027<br>
+                        <p>Formação superior voltada para análise, modelagem e interpretação de dados.</p>
+                    </li>
+
+                    <!-- Formação técnica em Edificações -->
+                    <li class="education-item">
+                        <strong>Técnico de Edificações</strong> — Faculdades Oswaldo Cruz<br>
+                        2018–2019<br>
+                        <p>Formação técnica em construção civil, processos de obra e gestão de atividades estruturais.
+                        </p>
+                    </li>
+
+                    <!-- Curso em Gestão de Operações -->
+                    <li class="education-item">
+                        <strong>Gestão de Operações</strong> — Insper<br>
+                        Agosto/2022 · Setembro/2022<br>
+                        <p>Capacitação em operações, eficiência, performance e estruturação de processos.</p>
+                    </li>
+
+                    <!-- Curso de análise de dados em alta dimensão -->
+                    <li class="education-item">
+                        <strong>Análise de Dados de Alta Dimensão</strong> — Harvard Online<br>
+                        Maio/2024 · Julho/2024<br>
+                        <p>Estudos sobre análise estatística avançada, interpretação e tratamento de grandes volumes de
+                            dados.</p>
+                    </li>
+
+                    <!-- Formação técnica inicial no SENAI -->
+                    <li class="education-item">
+                        <strong>Eletricista de Manutenção</strong> — SENAI São Paulo<br>
+                        2009–2010<br>
+                        <p>Formação técnica-base em manutenção elétrica e fundamentos de sistemas industriais.</p>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!--
+                SEÇÃO: PORTFÓLIO
+                Lista de projetos desenvolvidos, com descrição e tecnologias utilizadas.
+            -->
+            <section id="portfolio" class="content-section">
+
+                <ul class="projects">
+
+                    <!-- PROJETO 1 – Calculadora Web -->
+                    <li>
+                        <strong>Calculadora Web</strong><br>
+
+                        <!-- Tecnologias utilizadas no projeto -->
+                        <div class="project-badges">
+                            <span class="badge">HTML</span>
+                            <span class="badge">CSS</span>
+                            <span class="badge">JavaScript</span>
+                        </div>
+
+                        <p>
+                            Calculadora desenvolvida com funcionalidades essenciais, interface limpa
+                            e operações matemáticas básicas.
+                            O projeto reforçou conceitos de manipulação do DOM, eventos e
+                            avaliação segura de expressões no navegador.
+                        </p>
+
+                        <!-- Link para visualização do projeto -->
+                        <a href="https://nathymaarques.github.io/calculadora/" target="_blank">
+                            Ver projeto
+                        </a>
+                    </li>
+
+                    <!-- PROJETO 2 – Agenda Diária Interativa -->
+                    <li>
+                        <strong>Agenda Diária Interativa</strong><br>
+
+                        <!-- Tecnologias utilizadas no projeto -->
+                        <div class="project-badges">
+                            <span class="badge">HTML</span>
+                            <span class="badge">CSS</span>
+                            <span class="badge">JavaScript</span>
+                        </div>
+
+                        <p>
+                            Agenda feita para organizar tarefas do dia, com cadastro de horário,
+                            descrição, categoria e status (pendente/concluída).
+                            A atualização dinâmica da tabela reforçou práticas de formulários,
+                            ordenação de dados e construção de interfaces funcionais.
+                        </p>
+
+                        <!-- Link para visualização do projeto -->
+                        <a href="https://nathymaarques.github.io/checklist/" target="_blank">Ver projeto</a>
+                    </li>
+
+                    <!-- PROJETO 3 – Este próprio portfólio -->
+                    <li>
+                        <strong>Portfólio Profissional</strong><br>
+
+                        <!-- Tecnologias utilizadas no projeto -->
+                        <div class="project-badges">
+                            <span class="badge">HTML</span>
+                            <span class="badge">CSS</span>
+                            <span class="badge">JavaScript</span>
+                        </div>
+
+                        <p>
+                            Desenvolvimento completo deste portfólio, incluindo painel lateral,
+                            linha do tempo, formação, contato, responsividade e navegação por abas.
+                            O foco foi criar uma experiência clara, organizada e visualmente agradável.
+                        </p>
+
+                        <!-- Link simbólico, já que o usuário está navegando neste próprio site -->
+                        <a href="#" target="_blank">Você está nele agora ✦</a>
+                    </li>
+
+                </ul>
+            </section>
+
+
+            <!--
+                SEÇÃO: CONTATO
+                Formulário simples com validação em JavaScript (no arquivo script.js).
+            -->
+            <section id="contato" class="content-section">
+                <h2>Contato</h2>
+                <p>Preencha o formulário para entrar em contato comigo.</p>
+
+                <form id="formContato" novalidate>
+                    <div class="field">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Enviar mensagem</button>
+                    <div id="status" class="status"></div>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    <!--
+        JavaScript externo:
+        - controla a navegação por abas
+        - faz a validação básica do formulário de contato
+    -->
+    <script src="script.js"></script>
+</body>
+
+</html>

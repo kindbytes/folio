@@ -1,0 +1,717 @@
+/* ===========================
+   DESIGN SYSTEM (VARIÁVEIS)
+   - Paleta de cores, tamanhos de fonte, raios e transições.
+   - Facilita manter o visual consistente e fazer ajustes globais.
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght,MONO@200..800,1&display=swap');
+:root {
+
+  /* Cores principais de fundo e texto */
+  --bg: #ffffff;
+  --text: #111827;
+  --text-muted: #4b5563;
+  --text-soft: #6b7280;
+  --text-subtle: #9ca3af;
+
+  /* Cores de destaque (accent) usadas em botões, badges e estados ativos */
+  --accent: #000000;
+  --accent-soft: black;
+  --accent-strong: #000000;
+
+  /* Cores de borda e divisórias */
+  --border-soft: #e5e7eb;
+  --border-subtle: rgba(15, 23, 42, 0.08);
+
+  /* Cores de pills/badges secundárias */
+  --pill-bg-soft: #ffffff;
+  --pill-border-soft: rgba(0, 0, 0, 0.18);
+
+  /* Escala tipográfica base em rems */
+  --fs-xs: 0.78rem;
+  --fs-sm: 0.85rem;
+  --fs-md: 0.9rem;
+  --fs-lg: 1.1rem;
+  --fs-name: 1.25rem;
+
+  /* Raio de borda padrão para cartões e pills */
+  --radius-card: 0px;
+  --radius-soft: 0px;
+  --radius-pill: 0px;
+
+  /* Sombra suave para alguns elementos (avatar, cards, hover) */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* Transições padrão */
+  --transition-fast: 0.2s ease;
+  --transition-med: 0.35s ease;
+}
+
+/* ===========================
+   RESET / BASE
+   - Normaliza margens, padding e tipografia global.
+=========================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Sono', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 12px;
+  color: var(--text);
+ background-color: white;
+ max-height: 100vh;
+ cursor: url('Arrow1.png') 10 6, default;
+}
+
+a,
+button,
+[role="button"],
+.clickable,
+.tab,
+.btn,
+.badge,
+.tool-pill,
+.btn-social {
+  cursor: url("Hand3.png") 6 6, pointer;
+}
+
+
+
+
+
+
+/* ===========================
+   LAYOUT PRINCIPAL
+   - Container central em duas colunas: esquerda (perfil) e direita (conteúdo).
+=========================== */
+
+.layout {
+  max-width: 990px;
+  width: 100%;
+  background: var(--bg);
+  border-radius: var(--radius-card);
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  overflow: hidden; /* evita que bordas internas "estourem" o radius */
+  border: 1px solid black;
+  max-height: 100vh;
+}
+
+/* ===========================
+   PAINEL ESQUERDO
+   - Coluna fixa com informações pessoais e de contato.
+=========================== */
+
+.left-panel {
+  border-right: 1px solid black;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+/* Avatar genérico (pode ser substituído por imagem real) */
+.avatar {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border:  1px solid black;
+  background-image: url('avatar.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Nome em destaque e título/posição logo abaixo */
+.name {
+  font-size: var(--fs-name);
+  font-weight: 600;
+  align-self: center;
+  text-align: center;
+}
+
+.role {
+  font-size: var(--fs-md);
+  color: var(--text-soft);
+  align-self: center;
+  text-align: center;
+}
+
+/* Localização (ícone + texto) */
+.location-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.location-box svg {
+  flex-shrink: 0; /* evita esticar o ícone em layouts apertados */
+}
+
+/* Mini-bio e frase de efeito logo abaixo dos dados básicos */
+.mini-bio {
+  font-size: var(--fs-md);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.tagline {
+  font-size: var(--fs-sm);
+  color: var(--text-subtle);
+  font-style: italic;
+}
+
+/* Pill de status atual (ex.: disponível para projetos) */
+.status-pill {
+  font-size: var(--fs-xs);
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  background: black;
+  color: white;
+  border: 1px solid black;
+}
+
+/* Blocos genéricos do painel esquerdo (linha do tempo, ferramentas, contato) */
+.info-block,
+.contact-box {
+  width: 100%;
+}
+
+/* Título de seção no painel esquerdo (linha do tempo, ferramentas, etc.) */
+.block-title {
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-subtle);
+  margin-bottom: 4px;
+}
+
+/* Ajuste de legibilidade para parágrafos do "Sobre Mim" */
+#sobre p {
+  line-height: 1.5;
+}
+
+/* Lista de links de contato (LinkedIn, GitHub) */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Botões sociais com ícone + texto alinhados na horizontal */
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid black;
+  color: black;
+  font-size: var(--fs-sm);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.btn-social svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* Elevação leve ao passar o mouse nos botões sociais */
+.btn-social:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  background-color: black;
+  color: white;
+}
+
+/* ===========================
+   PAINEL DIREITO
+   - Área principal onde o conteúdo das abas é exibido.
+=========================== */
+
+.right-panel {
+  padding: 20px 22px;
+}
+
+/* Container das tabs (navegação interna) */
+.tab-container {
+  margin: 0 0 24px 0;
+}
+
+/* Linha de abas com fundo suave e borda */
+.tabs {
+  display: flex;
+  width: 100%;
+  border-radius: 0px;
+  border: 1px solid black;
+  padding: 2px;
+  background: #f9fafb;
+}
+
+/* Aba individual (botão) de navegação */
+.tab {
+  background: transparent;
+  padding: 8px 10px;
+  font-size: var(--fs-sm);
+  text-align: center;
+  color: var(--text-muted);
+  width: 100%;
+  border: none;
+  transition: transform 0.4s ease, background 0.4s ease, color 0.4s ease;
+}
+
+.tab:last-child {
+  border-right: none;
+}
+
+/* Efeito hover leve para dar sensação de movimento */
+.tab:hover {
+  background: white;
+  border: 1px solid black;
+  transform: translateX(4px);
+  color: black;
+}
+
+/* Aba ativa: destaque de cor e leve "pill" visual */
+.tab.active {
+  background: black;
+  color: white;
+  font-weight: 600;
+  transform: translateX(0);
+  border: 1px solid black;
+}
+
+/* Conteúdo das seções (cada aba mostra uma seção) */
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+/* Títulos das seções no painel direito */
+h2 {
+  margin-bottom: 8px;
+  font-size: var(--fs-lg);
+}
+
+/* Texto padrão de parágrafos e listas */
+p,
+li {
+  font-size: var(--fs-md);
+  color: var(--text-muted);
+}
+
+/* Margem para listas internas */
+ul {
+  margin-left: 16px;
+  margin-top: 6px;
+}
+
+/* Espaço vertical entre itens de projetos no portfólio */
+.projects li + li {
+  margin-top: 8px;
+}
+
+/* ===========================
+   FORMULÁRIO DE CONTATO
+   - Estilos de campos, labels, botão e mensagens de status.
+=========================== */
+
+.field {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+
+/* Campos de texto e textarea com bordas suaves e padding padrão */
+input,
+textarea {
+  padding: 7px 9px;
+  border-radius: 0px;
+  border: 1px solid black;
+  font-size: var(--fs-md);
+  font-family: inherit;
+}
+
+/* Destaque de foco nos campos (acessível, sem exagero visual) */
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--accent-soft);
+  border-color: #f97373;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Botão principal do formulário */
+.btn {
+  margin-top: 10px;
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-size: var(--fs-md);
+  transition: var(--transition-fast);
+}
+
+/* Efeito hover do botão de envio */
+.btn:hover {
+  background: #cf4b42;
+  box-shadow: 0 4px 12px rgba(226, 90, 80, 0.35);
+}
+
+/* Mensagem de status após envio do formulário */
+.status {
+  margin-top: 6px;
+  font-size: var(--fs-sm);
+}
+
+/* Estado de sucesso na mensagem */
+.status.ok {
+  color: #16a34a;
+}
+
+/* Estado de erro na mensagem */
+.status.error {
+  color: #dc2626;
+}
+
+/* ===========================
+   BADGES GERAIS (reutilizáveis)
+   - Usadas na área de projetos para mostrar tecnologias, etc.
+=========================== */
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.badge {
+  background: white;
+  color: var(--accent-strong);
+  padding: 4px 10px;
+  font-size: var(--fs-xs);
+  border-radius: var(--radius-pill);
+  border: 1px solid black;
+  display: inline-block;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+  transition: var(--transition-fast);
+}
+
+/* Hover sutil nas badges */
+.badge:hover {
+  background: black;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ===========================
+   TIMELINE VERTICAL
+   - Estilização da linha do tempo no painel esquerdo.
+=========================== */
+
+.info-block {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* Container da timeline: linha vertical com itens espaçados */
+.timeline-vertical {
+  border-left: 1px solid black;
+  margin-left: 10px;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Cada registro da linha do tempo */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+}
+
+/* Ponto visual na linha do tempo (marcando cada fase) */
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  border-radius: 50%;
+  position: absolute;
+  left: -21px;
+  top: 3px;
+}
+
+/* Conteúdo do item da timeline (data + texto) */
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.timeline-date {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: #374151;
+}
+
+.timeline-text {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Leve deslocamento ao passar o mouse, dando sensação de interação */
+.timeline-item:hover .timeline-content {
+  transform: translateX(4px);
+  transition: var(--transition-med);
+}
+
+/* Lista de ferramentas no painel esquerdo */
+.tools-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+/* Pill de ferramentas (Power BI, VS Code, etc.) */
+.tool-pill {
+  background: var(--pill-bg-soft);
+  color: black;
+  padding: 4px 10px;
+  font-size: var(--fs-xs);
+  border-radius: var(--radius-pill);
+  border: 1px solid black;
+  white-space: nowrap;
+  transition: var(--transition-med);
+}
+
+/* Efeito de deslocamento horizontal ao passar o mouse */
+.tool-pill:hover {
+  transform: translateX(4px);
+  background: black;
+  color: white;
+}
+
+/* Frase destacada para possíveis citações no "Sobre Mim" */
+.highlight-quote {
+  margin: 10px 0;
+  padding-left: 12px;
+  border-left: 3px solid var(--accent);
+  color: #555;
+  font-style: italic;
+}
+
+/* ===========================
+   SOBRE MIM — BLOCO INTERNO
+   - Subtítulos, listas e métricas visuais.
+=========================== */
+
+.subheading {
+  margin-top: 16px;
+  font-size: var(--fs-sm);
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Lista de itens descritivos dentro do Sobre Mim */
+.about-list {
+  margin-top: 8px;
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about-list li {
+  font-size: var(--fs-md);
+  color: var(--text-muted);
+}
+
+/* Grid de métricas em três colunas (anos, áreas, foco) */
+.sobre-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0 12px;
+}
+
+/* Card individual de métrica (número + descrição) */
+.sobre-metric {
+  padding: 8px 10px;
+  border-radius: var(--radius-soft);
+  background: #ffffff;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metric-number {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+}
+
+.metric-label {
+  font-size: var(--fs-xs);
+  color: var(--text-soft);
+}
+
+/* Duas colunas para separar "Como trabalho" e "Atualmente focada em" */
+.sobre-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.sobre-coluna {
+  min-width: 0;
+}
+
+/* ===========================
+   FORMAÇÃO
+   - Estilização da lista de formações acadêmicas e cursos.
+=========================== */
+
+.education-list {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.education-item {
+  font-size: var(--fs-md);
+  color: var(--text-muted);
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.education-item strong {
+  font-size: 1rem;
+  color: var(--accent-strong);
+}
+
+.education-item p {
+  margin-top: 4px;
+  font-size: var(--fs-sm);
+  color: var(--text-soft);
+}
+
+.education-list li{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* ===========================
+   RESPONSIVO
+   - Ajustes para telas menores (mobile).
+=========================== */
+
+@media (max-width: 720px) {
+  /* Colunas empilham: painel esquerdo em cima, direito abaixo */
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .left-panel {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Elementos do painel esquerdo centralizados visualmente */
+  .location-box,
+  .mini-bio,
+  .tagline,
+  .status-pill,
+  .info-block,
+  .contact-box {
+    align-self: center;
+    text-align: left; /* texto ainda começa alinhado à esquerda para leitura */
+  }
+
+  /* Avatar menor em telas pequenas */
+  .avatar {
+    width: 130px;
+    height: 130px;
+  }
+
+  .right-panel {
+    padding: 18px 16px;
+  }
+
+  /* Métricas empilhadas em uma coluna no mobile */
+  .sobre-metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Layout do sobre mim passa a ser uma coluna só */
+  .sobre-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* ===========================
+   PROJETOS (LISTA NO PORTFÓLIO)
+   - Caixa ao redor de cada projeto para destacar visualmente.
+=========================== */
+
+.projects li {
+  list-style-type: none;
+  border: 1px solid black;
+  padding: 30px;
+  border-radius: var(--radius-soft);
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects p{
+  line-height: 1.6;
+  color: black;
+}
+
+.projects li a{
+  color: black;
+  font-weight: 600;
+}

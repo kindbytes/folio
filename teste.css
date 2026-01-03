@@ -1,175 +1,361 @@
 @import url('https://fonts.googleapis.com/css2?family=Sono:wght,MONO@200..800,1&display=swap');
 
+/* ================================
+   CSS Variables & Reset
+   ================================ */
+:root {
+    /* Colors */
+    --color-primary: #000000;
+    --color-secondary: #ffffff;
+    --color-text-dark: #333333;
+    --color-text-medium: #444444;
+    --color-text-light: #666666;
+    --color-gray: #f2f2f2;
+    --color-gray-medium: #cccccc;
+    --color-hover-gray: #808080;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 0.625rem;
+    --space-md: 1.25rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    
+    /* Typography */
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.5rem;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.6;
+    
+    /* Layout */
+    --border-radius: 0.25rem;
+    --border-width: 1px;
+    --max-width-content: 50rem;
+    --header-height: 3.125rem;
+}
 
-body{
-    font-family: 'Sono', sans-serif;
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+/* ================================
+   Base Styles
+   ================================ */
+body {
+    font-family: 'Sono', system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-gray);
 }
 
-.about-project{
+/* ================================
+   Layout Components
+   ================================ */
+.about-project {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333333;
-    margin: 20px;
-    padding: 10px;
-    height: auto;
-    width: 800px;
-    border: 1px solid black;
+    gap: var(--space-lg);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    color: var(--color-text-dark);
+    margin: var(--space-lg);
+    padding: var(--space-md);
+    width: 100%;
+    max-width: var(--max-width-content);
+    border: var(--border-width) solid var(--color-primary);
+    border-radius: var(--border-radius);
+    background-color: var(--color-secondary);
 }
 
-.about-project li{
+.about-project-header {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    background-color: var(--color-secondary);
+    min-height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--border-width) solid var(--color-primary);
+    margin: calc(var(--space-md) * -1) calc(var(--space-md) * -1) var(--space-lg);
+    padding: 0 var(--space-md);
+}
+
+.about-project-header h1 {
+    margin: 0;
+    font-size: inherit;
+}
+
+/* ================================
+   Interactive Elements
+   ================================ */
+.about-project-header button {
+    color: var(--color-primary);
+    font-size: var(--font-size-lg);
+    border: var(--border-width) solid var(--color-primary);
+    padding: var(--space-xs) var(--space-md);
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: inherit;
+}
+
+.about-project-header button:hover,
+.about-project-header button:focus {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* ================================
+   Lists & Navigation
+   ================================ */
+.about-project ul {
+    padding: 0;
+    margin: 0;
     list-style: none;
-    border-bottom: 1px solid black;
-    padding: 5px 0;
-    margin: 0px;
-
 }
 
-.about-project ul{
+.about-project li {
+    border-bottom: var(--border-width) solid var(--color-gray-medium);
+    padding: var(--space-xs) 0;
+    margin: 0;
+    transition: padding-left 0.2s ease-in-out;
+}
+
+.about-project li:hover {
+    background-color: var(--color-gray);
+    padding-left: var(--space-sm);
+}
+
+.about-project li:last-child {
+    border-bottom: none;
+}
+
+.features li {
+    border: none;
     padding: 0;
     margin: 0;
 }
 
-table, th {
-    border: 1px solid black;
-}
-
-td {
-    display: flex;
-    border-top: 1px solid black;
-    align-items: center;
-    gap: 10px;
-    padding: 5px 10px;
-}
-
-td:hover {
-    background-color: black;
-    color: white;
-}
-
-table {
-    width: 100%;
-    margin-top: 20px;
-    border-radius: 3px;
-}
-
-th {
-    background-color: #f2f2f2;
-    border: none;
-    text-align: left;
-    color: black;
-    padding: 5px 10px;
-}
-
-.readme{
-    font-size: 14px;
-    line-height: 1.6;
-    color: #444444;
-    border: 1px solid black;
-    padding: 10px;
-}
-
-.about-project-header{
-    font-size: 24px;
-    font-weight: bold;
-    background-color: #ffffff;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.about-project-header h1{
-    margin: 0;
-    padding: 10px;
-}
-
-.about-project-header button{
-    color: black;
-    font-size: 15px;
-    border: 1px solid black;
-    padding: 7px 15px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-radius: 3px;;
-}
-
-.about-project-header button:hover{
-    background-color: black;
-    color: white;
-}
-
+/* ================================
+   Technology Badges
+   ================================ */
 .tecnologies-badge {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
     padding: 0;
     margin: 0;
 }
 
 .tecnologies-badge li {
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    border: none;
+    transition: transform 0.2s ease-in-out;
 }
 
-.readme-header{
+.tecnologies-badge li:hover {
+    transform: translateY(-1px);
+    background-color: var(--color-text-dark);
+    padding-left: var(--space-sm);
+}
+
+/* ================================
+   Tables
+   ================================ */
+table {
+    width: 100%;
+    margin-top: var(--space-lg);
+    border-radius: var(--border-radius);
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+th,td {
+    border-bottom: var(--border-width) solid var(--color-primary);
+    border-left: var(--border-width) solid var(--color-primary);
+    border-right: var(--border-width) solid var(--color-primary);
+}
+
+th {
+    background-color: var(--color-gray);
+    text-align: left;
+    color: var(--color-primary);
+    padding: var(--space-sm) var(--space-md);
+    font-weight: 600;
+    border-top: var(--border-width) solid var(--color-primary);
+}
+
+td {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+td:hover,
+td:focus {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    transform: translateX(0.25rem);
+}
+
+/* ================================
+   README Section
+   ================================ */
+.readme {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-medium);
+    border: var(--border-width) solid var(--color-primary);
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    background-color: var(--color-secondary);
+}
+
+.readme-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: var(--space-sm);
+    flex-wrap: wrap;
+    gap: var(--space-sm);
 }
 
-.readme-header a{
+.readme-header a {
     text-decoration: none;
-    color: black;
+    color: var(--color-primary);
     font-weight: bold;
+    transition: color 0.2s ease-in-out;
 }
 
-.readme-header a:hover{
-    color: gray;
+.readme-header a:hover,
+.readme-header a:focus {
+    color: var(--color-hover-gray);
+    text-decoration: underline;
 }
 
-.features li{
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-.header{
-    border-bottom: 1px solid black;
-    background-color: black;
-    color: white;
-    height: 30px;
+/* ================================
+   Header Controls
+   ================================ */
+.header {
+    border-bottom: var(--border-width) solid var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    min-height: 2.5rem;
     display: flex;
-    margin: -10px;
-    gap: 10px;
+    gap: var(--space-sm);
     justify-content: flex-end;
-    padding: 5px;
+    align-items: center;
+    padding: var(--space-xs) var(--space-sm);
+    margin: calc(var(--space-md) * -1) calc(var(--space-md) * -1) 0;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
-.header .minimize, .header .close{
-    padding: 5px 10px;
-    width: 30px;
-    text-align: center;
+.header .minimize,
+.header .close {
+    padding: var(--space-xs);
+    min-width: 2rem;
+    height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 18px;
+    font-size: var(--font-size-lg);
     user-select: none;
-
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s ease-in-out;
 }
 
-.header .minimize:hover, .header .close:hover{
-    background-color: gray;
-    cursor: pointer;
+.header .minimize:hover,
+.header .minimize:focus,
+.header .close:hover,
+.header .close:focus {
+    background-color: var(--color-hover-gray);
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 1px;
+}
+
+/* ================================
+   Responsive Design
+   ================================ */
+@media (max-width: 768px) {
+    .about-project {
+        margin: var(--space-sm);
+        padding: var(--space-sm);
+    }
+    
+    .about-project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+        min-height: auto;
+        padding: var(--space-sm);
+    }
+    
+    .readme-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .tecnologies-badge {
+        justify-content: center;
+    }
+    
+    td {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-xl: 1.25rem;
+        --space-lg: 1rem;
+    }
+    
+    .about-project {
+        margin: var(--space-xs);
+        padding: var(--space-xs);
+    }
+}
+
+/* ================================
+   Accessibility Improvements
+   ================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+*:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }

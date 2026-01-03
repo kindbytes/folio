@@ -50,6 +50,11 @@ td {
     padding: 5px;
 }
 
+td:hover {
+    background-color: black;
+    color: white;
+}
+
 table {
     width: 100%;
     margin-top: 20px;
@@ -90,11 +95,17 @@ th {
     color: black;
     font-size: 15px;
     border: 1px solid black;
+    padding: 7px 15px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 3px;;
+}
+
+.about-project-header button:hover{
     background-color: black;
-    cursor: pointer;
     color: white;
-    padding: 7px 30px;
-    
 }
 
 .tecnologies-badge {
@@ -108,4 +119,27 @@ th {
     background-color: black;
     color: white;
     padding: 5px 10px;
+}
+
+.readme-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.readme-header a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.readme-header a:hover{
+    color: gray;
+}
+
+.features li{
+    border: none;
+    padding: 0;
+    margin: 0;
 }

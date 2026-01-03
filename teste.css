@@ -19,8 +19,9 @@ body{
     color: #333333;
     margin: 20px;
     padding: 10px;
-    height: 800px;
+    height: auto;
     width: 800px;
+    border: 1px solid black;
 }
 
 .about-project li{
@@ -38,8 +39,6 @@ body{
 
 table, th {
     border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
 }
 
 td {
@@ -47,7 +46,7 @@ td {
     border-top: 1px solid black;
     align-items: center;
     gap: 10px;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 td:hover {
@@ -58,6 +57,7 @@ td:hover {
 table {
     width: 100%;
     margin-top: 20px;
+    border-radius: 3px;
 }
 
 th {
@@ -142,4 +142,34 @@ th {
     border: none;
     padding: 0;
     margin: 0;
+}
+
+.header{
+    border-bottom: 1px solid black;
+    background-color: black;
+    color: white;
+    height: 30px;
+    display: flex;
+    margin: -10px;
+    gap: 10px;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.header .minimize, .header .close{
+    padding: 5px 10px;
+    width: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+
+}
+
+.header .minimize:hover, .header .close:hover{
+    background-color: gray;
+    cursor: pointer;
 }

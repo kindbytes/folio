@@ -126,7 +126,7 @@ button,
   justify-content: center;
   align-self: center;
   border:  1px solid black;
-  background-image: url('avatar.png');
+  background-image: url('../assets/mascot/avatar.png');
   background-size: cover;
   background-position: center;
 }

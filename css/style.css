@@ -4,12 +4,14 @@
    - Facilita manter o visual consistente e fazer ajustes globais.
 =========================== */
 @import url('https://fonts.googleapis.com/css2?family=Sono:wght,MONO@200..800,1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 :root {
 
   /* Cores principais de fundo e texto */
-  --bg: #ffffff;
+  --bg: #fdfff5;
   --text: #111827;
-  --text-muted: #4b5563;
+  --text-muted: #171E1E;
   --text-soft: #6b7280;
   --text-subtle: #9ca3af;
 
@@ -27,11 +29,11 @@
   --pill-border-soft: rgba(0, 0, 0, 0.18);
 
   /* Escala tipográfica base em rems */
-  --fs-xs: 0.78rem;
-  --fs-sm: 0.85rem;
-  --fs-md: 0.9rem;
-  --fs-lg: 1.1rem;
-  --fs-name: 1.25rem;
+  --fs-xs: 0.72rem;
+  --fs-sm: 0.78rem;
+  --fs-md: 0.84rem;
+  --fs-lg: 1.02rem;
+  --fs-name: 1.15rem;
 
   /* Raio de borda padrão para cartões e pills */
   --radius-card: 0px;
@@ -65,9 +67,9 @@ body {
   justify-content: center;
   padding: 24px 12px;
   color: var(--text);
- background-color: white;
- max-height: 100vh;
- cursor: url('Arrow1.png') 10 6, default;
+  background-color: var(--bg);
+  max-height: 100vh;
+  cursor: url('../assets/cursor/Arrow1.png') 10 6, default;
 }
 
 a,
@@ -79,12 +81,8 @@ button,
 .badge,
 .tool-pill,
 .btn-social {
-  cursor: url("Hand3.png") 6 6, pointer;
+  cursor: url("../assets/cursor/Hand3.png") 6 6, pointer;
 }
-
-
-
-
 
 
 /* ===========================
@@ -99,7 +97,8 @@ button,
   border-radius: var(--radius-card);
   display: grid;
   grid-template-columns: 350px 1fr;
-  overflow: hidden; /* evita que bordas internas "estourem" o radius */
+  overflow: hidden;
+  /* evita que bordas internas "estourem" o radius */
   border: 1px solid black;
   max-height: 100vh;
 }
@@ -125,10 +124,11 @@ button,
   display: flex;
   justify-content: center;
   align-self: center;
-  border:  1px solid black;
+  border: 1px solid black;
   background-image: url('../assets/mascot/avatar.png');
   background-size: cover;
   background-position: center;
+  border-radius: 5px;
 }
 
 /* Nome em destaque e título/posição logo abaixo */
@@ -156,11 +156,13 @@ button,
 }
 
 .location-box svg {
-  flex-shrink: 0; /* evita esticar o ícone em layouts apertados */
+  flex-shrink: 0;
+  /* evita esticar o ícone em layouts apertados */
 }
 
 /* Mini-bio e frase de efeito logo abaixo dos dados básicos */
 .mini-bio {
+  font-family: "JetBrains Mono", monospace;
   font-size: var(--fs-md);
   color: var(--text-muted);
   line-height: 1.5;
@@ -177,9 +179,10 @@ button,
   font-size: var(--fs-xs);
   padding: 6px 10px;
   border-radius: var(--radius-pill);
-  background: black;
-  color: white;
+  background: #cde0ae;
+  color: black;
   border: 1px solid black;
+  border-radius: 5px;
 }
 
 /* Blocos genéricos do painel esquerdo (linha do tempo, ferramentas, contato) */
@@ -200,6 +203,8 @@ button,
 /* Ajuste de legibilidade para parágrafos do "Sobre Mim" */
 #sobre p {
   line-height: 1.5;
+  font-weight: 400;
+  font-family: "JetBrains Mono", monospace;
 }
 
 /* Lista de links de contato (LinkedIn, GitHub) */
@@ -223,6 +228,7 @@ button,
   font-size: var(--fs-sm);
   text-decoration: none;
   transition: var(--transition-fast);
+  border-radius: 5px;
 }
 
 .btn-social svg {
@@ -259,6 +265,7 @@ button,
   width: 100%;
   border-radius: 0px;
   border: 1px solid black;
+  border-radius: 5px;
   padding: 2px;
   background: #f9fafb;
 }
@@ -283,17 +290,19 @@ button,
 .tab:hover {
   background: white;
   border: 1px solid black;
+  border-radius: 5px;
   transform: translateX(4px);
   color: black;
 }
 
 /* Aba ativa: destaque de cor e leve "pill" visual */
 .tab.active {
-  background: black;
-  color: white;
+  background: #FCB078;
+  color: black;
   font-weight: 600;
   transform: translateX(0);
   border: 1px solid black;
+  border-radius: 5px;
 }
 
 /* Conteúdo das seções (cada aba mostra uma seção) */
@@ -325,7 +334,7 @@ ul {
 }
 
 /* Espaço vertical entre itens de projetos no portfólio */
-.projects li + li {
+.projects li+li {
   margin-top: 8px;
 }
 
@@ -415,11 +424,11 @@ textarea {
 }
 
 .badge {
-  background: white;
+  background: #DA8FA3;
   color: var(--accent-strong);
   padding: 4px 10px;
   font-size: var(--fs-xs);
-  border-radius: var(--radius-pill);
+  border-radius: 5px;
   border: 1px solid black;
   display: inline-block;
   white-space: nowrap;
@@ -509,11 +518,11 @@ textarea {
 
 /* Pill de ferramentas (Power BI, VS Code, etc.) */
 .tool-pill {
-  background: var(--pill-bg-soft);
-  color: black;
+  background: var(--accent-strong);
+  color: var(--bg);
   padding: 4px 10px;
   font-size: var(--fs-xs);
-  border-radius: var(--radius-pill);
+  border-radius: 5px;
   border: 1px solid black;
   white-space: nowrap;
   transition: var(--transition-med);
@@ -522,8 +531,8 @@ textarea {
 /* Efeito de deslocamento horizontal ao passar o mouse */
 .tool-pill:hover {
   transform: translateX(4px);
-  background: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 /* Frase destacada para possíveis citações no "Sobre Mim" */
@@ -634,7 +643,7 @@ textarea {
   color: var(--text-soft);
 }
 
-.education-list li{
+.education-list li {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -646,6 +655,7 @@ textarea {
 =========================== */
 
 @media (max-width: 720px) {
+
   /* Colunas empilham: painel esquerdo em cima, direito abaixo */
   .layout {
     grid-template-columns: 1fr;
@@ -666,7 +676,8 @@ textarea {
   .info-block,
   .contact-box {
     align-self: center;
-    text-align: left; /* texto ainda começa alinhado à esquerda para leitura */
+    text-align: left;
+    /* texto ainda começa alinhado à esquerda para leitura */
   }
 
   /* Avatar menor em telas pequenas */
@@ -706,12 +717,12 @@ textarea {
   flex-direction: column;
 }
 
-.projects p{
+.projects p {
   line-height: 1.6;
   color: black;
 }
 
-.projects li a{
+.projects li a {
   color: black;
   font-weight: 600;
 }

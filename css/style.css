@@ -91,7 +91,7 @@ button,
 =========================== */
 
 .layout {
-  max-width: 990px;
+  max-width: 980px;
   width: 100%;
   background: var(--bg);
   border-radius: var(--radius-card);
@@ -125,9 +125,7 @@ button,
   justify-content: center;
   align-self: center;
   border: 1px solid black;
-  background-image: url('../assets/mascot/avatar.png');
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
   border-radius: 5px;
 }
 
@@ -182,7 +180,7 @@ button,
   background: #cde0ae;
   color: black;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 /* Blocos genéricos do painel esquerdo (linha do tempo, ferramentas, contato) */
@@ -428,7 +426,7 @@ textarea {
   color: var(--accent-strong);
   padding: 4px 10px;
   font-size: var(--fs-xs);
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid black;
   display: inline-block;
   white-space: nowrap;

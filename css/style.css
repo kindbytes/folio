@@ -57,7 +57,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Sono', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 body {
@@ -220,13 +220,12 @@ button,
   align-items: center;
   gap: 6px;
   padding: 6px 10px;
-  border-radius: var(--radius-pill);
   border: 1px solid black;
   color: black;
   font-size: var(--fs-sm);
   text-decoration: none;
   transition: var(--transition-fast);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .btn-social svg {
@@ -263,7 +262,7 @@ button,
   width: 100%;
   border-radius: 0px;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 2px;
   background: #f9fafb;
 }
@@ -276,8 +275,8 @@ button,
   text-align: center;
   color: var(--text-muted);
   width: 100%;
-  border: none;
-  transition: transform 0.4s ease, background 0.4s ease, color 0.4s ease;
+  border: 1px solid transparent;
+  margin: 3px;
 }
 
 .tab:last-child {
@@ -288,8 +287,8 @@ button,
 .tab:hover {
   background: white;
   border: 1px solid black;
-  border-radius: 5px;
-  transform: translateX(4px);
+  border-radius: 3px;
+
   color: black;
 }
 
@@ -300,7 +299,7 @@ button,
   font-weight: 600;
   transform: translateX(0);
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 /* Conteúdo das seções (cada aba mostra uma seção) */
@@ -516,11 +515,11 @@ textarea {
 
 /* Pill de ferramentas (Power BI, VS Code, etc.) */
 .tool-pill {
-  background: var(--accent-strong);
-  color: var(--bg);
+  background: #A3D2CA;
+  color: var(--accent-strong);
   padding: 4px 10px;
   font-size: var(--fs-xs);
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid black;
   white-space: nowrap;
   transition: var(--transition-med);

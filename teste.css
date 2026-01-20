@@ -6,7 +6,7 @@
    ================================ */
 :root {
     /* Fundo */
-    --bg: #dad4bb;
+    --bg: #fdfff5;
 
     /* Texto */
     --text: #0f172a;
@@ -141,9 +141,8 @@ body {
 
 .readme-container {
     display: flex;
-    padding: var(--space-lg) var(--space-xl);
-    max-width: var(--max-width-content);
-    margin: 0 auto;
+    width: 100%;
+    background-color: var(--danger);
 }
 
 .readme {
@@ -154,6 +153,7 @@ body {
 
 .project-card {
     display: flex;
+    width: 100%;
     flex-direction: column;
     padding: var(--space-md);
     border-radius: var(--radius-card);
@@ -173,75 +173,66 @@ body {
     border: none;
 }
 
+.project-card__languages{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    width: 100%;
+}
 
 .language-list {
     width: 200px;
     list-style: none;
     padding: 0;
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     margin-top: var(--space-md);
     overflow: hidden;
     gap: 5px;
 }
 
-.language--html {
-    background-color: var(--peach);
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--radius-pill);
-    font-size: var(--fs-xs);
-    font-weight: 600;
-    color: var(--text);
+.lang-list{
+    gap: 5px;
 }
 
-
-.language--css {
-    background-color: var(--sage);
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--radius-pill);
-    font-size: var(--fs-xs);
-    font-weight: 600;
-    color: var(--text);
-}
-
-.language--js {
-    background-color: var(--mint);
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--radius-pill);
-    font-size: var(--fs-xs);
-    font-weight: 600;
-    color: var(--text);
-}
-
-.bar-multi {
+.lang-bar {
     display: flex;
-    width: 200px;
     height: 15px;
-    border-radius: var(--radius-soft);
+    width: 200px;
+    border-radius: 3px;
+    border: 1px solid black;
     overflow: hidden;
     background: #eee;
-    border: 1px solid var(--accent);
 }
 
-.bar-multi span{
-    border-right: 1px solid black;
-}
-
-.bar-multi span {
+.lang-bar span {
     height: 100%;
 }
 
-.bar-multi .html {
-    width: 60%;
+.lang-html {
     background: #FCB078;
+    border-right: 1px solid var(--accent);
 }
 
-.bar-multi .css {
-    width: 25%;
+.lang-css {
     background: #CDE0AE;
+    border-right: 1px solid var(--accent);
 }
 
-.bar-multi .js {
-    width: 15%;
+.lang-javascript {
     background: #A3D2CA;
-    border: none;
+}
+
+.lang-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* bolinha */
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  border: 1px solid var(--accent);
 }

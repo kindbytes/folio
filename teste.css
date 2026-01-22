@@ -59,7 +59,7 @@
     --space-xl: 1.5rem;
 
     /* Layout */
-    --border-width: 1px;
+    --border-width: 2px;
     --max-width-content: 48rem;
     --header-height: 2.5rem;
     /* Apoio visual */
@@ -92,6 +92,16 @@ body {
     font-size: var(--fs-md);
 }
 
+.content{
+    max-width: var(--max-width-content);
+    width: 100%;
+    padding: var(--space-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
 /* ================================
    Main Container
    ================================ */
@@ -102,7 +112,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0;
-    border: var(--border-width) solid var(--accent);
+    border: 2px solid var(--accent);
     border-radius: var(--radius-card);
     background-color: var(--bg);
     color: var(--text-muted);
@@ -116,7 +126,7 @@ body {
     gap: var(--space-sm);
     padding: var(--space-sm) var(--space-md);
     background-color: var(--bg);
-    border-bottom: 1px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
 }
 
 .about-project-header span {
@@ -142,7 +152,8 @@ body {
 .readme-container {
     display: flex;
     width: 100%;
-    background-color: var(--danger);
+    padding: var(--space-md);
+    gap: var(--space-md);
 }
 
 .readme {
@@ -155,10 +166,18 @@ body {
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding: var(--space-md);
     border-radius: var(--radius-card);
     margin-top: var(--space-lg);
+    padding: var(--space-md);
 }
+
+.project-card__release{
+    font-size: var(--fs-xs);
+    color: var(--text-soft);
+    margin-bottom: var(--space-sm);
+    padding: 5px ;
+}
+
 
 .project-card__header {
     display: flex;
@@ -166,6 +185,8 @@ body {
     font-family: 'Sono', sans-serif;
     margin-bottom: var(--space-md);
     line-height: 1.5;
+    padding: var(--space-sm);
+    gap: var(--space-sm);
 }
 
 .btn {
@@ -176,12 +197,20 @@ body {
 .project-card__languages{
     display: flex;
     flex-direction: column;
+    padding: var(--space-sm);
     gap: var(--space-sm);
-    width: 100%;
+    
+}
+
+.project-card__label{
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--text-soft);
+    align-self: flex-start;
 }
 
 .language-list {
-    width: 200px;
+    width: fit-content;
     list-style: none;
     padding: 0;
     display: flex;
@@ -192,6 +221,14 @@ body {
 }
 
 .lang-list{
+    gap: 5px;
+    font-size: 13px;
+}
+
+.lang-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 5px;
 }
 
@@ -231,8 +268,8 @@ body {
 
 /* bolinha */
 .dot {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   border-radius: 3px;
   border: 1px solid var(--accent);
 }

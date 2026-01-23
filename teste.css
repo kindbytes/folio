@@ -106,7 +106,7 @@ body {
    Main Container
    ================================ */
 .about-project {
-    width: 100%;
+    max-width: 900px;
     margin: var(--space-md);
     padding: 0;
     display: flex;
@@ -157,6 +157,7 @@ body {
 }
 
 .readme {
+    background-color: #FFFFF0;
     border: 1px solid var(--accent);
     padding: var(--space-md);
     border-radius: var(--radius-card);
@@ -168,7 +169,9 @@ body {
     flex-direction: column;
     border-radius: var(--radius-card);
     margin-top: var(--space-lg);
-    padding: var(--space-md);
+    padding: var(--space-lg);
+    background-color: #FFFFF0;
+    border: 1px solid var(--accent);
 }
 
 .project-card__release{
@@ -183,9 +186,9 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Sono', sans-serif;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
     line-height: 1.5;
-    padding: var(--space-sm);
+    padding: 0;
     gap: var(--space-sm);
 }
 

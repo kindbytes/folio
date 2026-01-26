@@ -291,6 +291,7 @@ body {
     margin: 10px 0;
     padding: 0;
     line-height: var(--lh-normal);
+    margin-top: var(--space-lg);
 }
 
 /* Small info row (version + author, etc) */
@@ -308,6 +309,8 @@ body {
     align-items: center;
     gap: var(--space-sm);
     margin-top: var(--space-lg);
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
 }
 
 .btn {
@@ -377,6 +380,7 @@ body {
     letter-spacing: 0.05em;
     line-height: var(--lh-tight);
     align-self: flex-start;
+    margin-bottom: var(--space-sm);
 }
 
 .project-card__date {

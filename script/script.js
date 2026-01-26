@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ===============================
      CONTROLE DE ABAS (NAVEGAÇÃO)
   =============================== */
-
   // Seleciona todas as abas
   const tabs = document.querySelectorAll('.tab');
 

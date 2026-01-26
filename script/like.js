@@ -1,7 +1,6 @@
-// js/like.js
 import { supabase } from "./supabase.js";
 
-const postId = "UUID_DO_POST"; // Substitua pelo ID real do post
+const postId = "11111111-1111-1111-1111-111111111111"; // Substitua pelo ID real do post
 const btn = document.getElementById("btn-count");
 const countSpan = document.getElementById("like-count");
 
@@ -9,14 +8,23 @@ let liked = false;
 
 // Função para buscar o total de likes
 async function getLikes() {
-  const { data } = await supabase
+  const { data, error } = await supabase
     .from("posts")
     .select("likes")
     .eq("id", postId)
-    .single();
+    .maybeSingle(); // melhor que single()
 
-  countSpan.textContent = data.likes;
+  console.log("[getLikes] retorno:", { data, error });
+
+  if (error) {
+    console.error("Erro ao buscar likes:", error);
+    countSpan.textContent = "0";
+    return;
+  }
+
+  countSpan.textContent = data?.likes ?? 0;
 }
+
 
 // Função para alternar like
 async function toggleLike() {
@@ -35,3 +43,7 @@ async function toggleLike() {
 // Inicializa
 getLikes();
 btn.addEventListener("click", toggleLike);
+
+console.log("postId usado:", postId);
+
+

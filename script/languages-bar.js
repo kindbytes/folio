@@ -1,5 +1,5 @@
-const owner = "kindbytes";
-const repo  = "folio";
+import { owner, repo } from "./github-config.js";
+
 
 fetch(`https://api.github.com/repos/${owner}/${repo}/languages`)
   .then(r => r.json())

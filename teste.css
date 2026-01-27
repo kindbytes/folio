@@ -109,22 +109,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.content {
-    max-width: var(--max-width-content);
-    width: 100%;
-    padding: var(--space-lg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--space-lg);
-}
-
-
 /* =========================================================
    MAIN CONTAINER (WINDOW)
    ========================================================= */
 .about-project {
-    max-width: 900px;
+    max-width: 990px;
     margin: var(--space-md);
     padding: 0;
     display: flex;
@@ -137,38 +126,55 @@ body {
     box-shadow: var(--shadow-soft);
 }
 
+.about-project-content{
+    display: flex;
+    gap: var(--space-lg);
+}
 
 /* =========================================================
    WINDOW HEADER (TOP BAR)
    ========================================================= */
 .about-project-header {
     display: flex;
-    align-items: end;
-    justify-content: flex-end;
-    gap: var(--space-sm);
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
     padding: var(--space-sm) var(--space-md);
-    background-color: var(--bg);
+    background-color: #FFFFF0;
     border-bottom: 2px solid var(--accent);
+    gap: 20px;
 }
 
-.about-project-header span {
-    width: 20px;
-    height: 20px;
+.header-actions{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-actions span {
+    width: 15px;
+    height: 15px;
     background-color: var(--accent);
-    border-radius: 3px;
+    border-radius: 50%;
     display: inline-block;
     border: 1px solid var(--accent);
     cursor: pointer;
 }
 
-.about-project-header .close:hover {
-    background-color: #ED6A5E;
-    border: 1px solid #ED6A5E;
+.header-actions .maximize {
+    background-color: var(--sage);
+    border: 1px solid var(--sage);
 }
 
-.about-project-header .minimize:hover {
-    background-color: #F4BF4F;
-    border: 1px solid #F4BF4F;
+.header-actions .close {
+    background-color: var(--rose);
+    border: 1px solid var(--rose);
+}
+
+
+.about-project-header .minimize{
+    background-color: var(--peach);
+    border: 1px solid var(--peach);
 }
 
 
@@ -187,8 +193,6 @@ body {
    README (LEFT)
    ========================================================= */
 .readme {
-    background-color: #FFFFF0;
-    border: 1px solid var(--accent);
     padding: var(--space-md);
     border-radius: var(--radius-card);
 }
@@ -245,6 +249,7 @@ body {
     flex-direction: column;
     border-radius: var(--radius-card);
     padding: var(--space-lg);
+    border-left: 1px solid var(--border-subtle);
 }
 
 /* Header */
@@ -256,7 +261,6 @@ body {
     line-height: var(--lh-tight);
     padding: 0;
     gap: var(--space-sm);
-    padding-bottom: var(--space-sm);
 }
 
 .project-card__title {
@@ -297,9 +301,9 @@ body {
 /* Small info row (version + author, etc) */
 .info {
     display: flex;
+    flex-direction: column;
     gap: 10px;
 }
-
 
 /* =========================================================
    ACTIONS (LIKE / STAR / ETC)
@@ -470,4 +474,115 @@ body {
 ion-icon {
     font-size: 1.2rem;
     transition: transform 0.2s ease;
+}
+
+/* =========================================================
+   PROJECT STATUS BADGE
+   ========================================================= */
+.project-status {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.05em;
+  padding: 2px 6px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-pill);
+  width: fit-content;
+  margin-top: 4px;
+}
+
+/* Variantes */
+.status-active {
+  color: #166534;
+  background-color: rgba(22, 101, 52, 0.15);
+  padding: 5px;
+  font-size: var(--fs-xs);
+}
+
+.status-progress {
+  background: rgba(245, 158, 11, 0.15);
+  color: #92400e;
+  border-color: #92400e;
+}
+
+.status-archived {
+  background: rgba(220, 38, 38, 0.12);
+  color: #7f1d1d;
+  border-color: #7f1d1d;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: var(--space-lg);
+    padding: 10px 0;
+}
+
+.project-links a {
+    text-decoration: none;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--text);
+    padding: var(--space-sm) var(--space-md);   
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-pill);
+    transition: 
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.project-links a:hover {
+    background-color: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+}
+
+.project-content{
+    display: flex;
+    gap: var(--space-lg);
+    background-color: bisque;
+}
+
+.project-card__title-status{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot-status{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #16a34a;
+    display: inline-block;
+}
+
+.status-activee {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+    color: #16a34a;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tecnologies{
+    margin-bottom: var(--space-lg);
+}
+
+.tecnologies-list{
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.tecnology-item{
+    background-color: var(--pill-bg-soft);
+    border: 1px solid var(--pill-border-soft);
+    border-radius: var(--radius-pill);
+    padding: 4px 8px;
+    font-size: var(--fs-xs);
+    color: var(--text-soft);
 }

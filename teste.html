@@ -1,73 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="teste.css">
   <title>Project</title>
 </head>
-
 <body>
   <div class="about-project">
     <div class="about-project-header">
-      <span class="minimize"></span>
-      <span class="close">
-      </span>
-    </div>
-    <div class="content">
+      <div class="header-actions">
+        <span class="maximize"></span>
+        <span class="minimize"></span>
+        <span class="close"></span>
+      </div>
+      <div class="title">
+        <span class="header-title">
+          repo://folio
+        </span>
+      </div>
     </div>
     <div class="readme-container">
       <article class="readme" aria-labelledby="readme-title">
+              <header class="project-card__header">
+          <h1 id="project-title" class="project-card__title">Name Project</h1>
+          <span class="description">
+            This is a brief description of the project.
+          </span>
+        <div class="info">
+          <div class="status-info">
+            <span class="project-status status-active">Frontend</span>
+            <span class="project-status status-maintained">UI</span>
+            <span class="project-status status-archived">Study</span>
+          </div>
+            <div class="info__item">
+              <span class="project-card__version">v1.0.0</span>
+              <span>·</span>
+              <span class="project-card__author">Author Name</span>
+            </div>
+        </div>
+        </header>
         <header class="readme-header">
           <h2 id="readme-title">Readme</h2>
-          <a href="https://seu-link-aqui.com" aria-label="View on web" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" height="32" width="32" aria-hidden="true"
-              focusable="false">
-              <title>internet-network-www</title>
-              <g>
-                <path
-                  d="M30.47 9.14h-1.52v1.53H25.9V9.14h-1.52v1.53H7.62V9.14H6.09v1.53H3.05V9.14H1.52v3.05H0v7.62h1.52v3.05h1.53v-1.53h3.04v1.53h1.53v-1.53h16.76v1.53h1.52v-1.53h3.05v1.53h1.52v-3.05H32v-7.62h-1.53Zm-19.81 9.14H9.14v1.53H7.62v-1.53H6.09v1.53H4.57v-1.53H3.05v-4.57h1.52v4.57h1.52v-3.04h1.53v3.04h1.52v-4.57h1.52Zm9.15 0h-1.53v1.53h-1.52v-1.53h-1.52v1.53h-1.53v-1.53h-1.52v-4.57h1.52v4.57h1.53v-3.04h1.52v3.04h1.52v-4.57h1.53Zm9.14 0h-1.52v1.53H25.9v-1.53h-1.52v1.53h-1.53v-1.53h-1.52v-4.57h1.52v4.57h1.53v-3.04h1.52v3.04h1.53v-4.57h1.52Z"
-                  fill="currentColor" stroke-width="1"></path>
-                <path d="M27.43 22.86h1.52v3.04h-1.52Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M27.43 6.09h1.52v3.05h-1.52Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M25.9 25.9h1.53v1.53H25.9Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M25.9 4.57h1.53v1.52H25.9Z" fill="currentColor" stroke-width="1"></path>
-                <path d="m25.9 7.62 0 -1.53 -4.57 0 0 -1.52 -1.52 0 0 3.05 3.04 0 0 1.52 1.53 0 0 -1.52 1.52 0z"
-                  fill="currentColor" stroke-width="1"></path>
-                <path d="M22.85 27.43h3.05v1.52h-3.05Z" fill="currentColor" stroke-width="1"></path>
-                <path d="m22.85 24.38 -3.04 0 0 3.05 1.52 0 0 -1.53 4.57 0 0 -1.52 -1.52 0 0 -1.52 -1.53 0 0 1.52z"
-                  fill="currentColor" stroke-width="1"></path>
-                <path d="M22.85 3.05h3.05v1.52h-3.05Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M19.81 28.95h3.04v1.53h-3.04Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M19.81 1.52h3.04v1.53h-3.04Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M18.28 27.43h1.53v1.52h-1.53Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M18.28 3.05h1.53v1.52h-1.53Z" fill="currentColor" stroke-width="1"></path>
-                <path
-                  d="m18.28 28.95 -1.52 0 0 1.53 -1.52 0 0 -1.53 -1.53 0 0 1.53 -1.52 0 0 1.52 7.62 0 0 -1.52 -1.53 0 0 -1.53z"
-                  fill="currentColor" stroke-width="1"></path>
-                <path d="M12.19 7.62h7.62v1.52h-7.62Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M12.19 22.86h7.62v1.52h-7.62Z" fill="currentColor" stroke-width="1"></path>
-                <path
-                  d="m13.71 3.05 1.53 0 0 -1.53 1.52 0 0 1.53 1.52 0 0 -1.53 1.53 0 0 -1.52 -7.62 0 0 1.52 1.52 0 0 1.53z"
-                  fill="currentColor" stroke-width="1"></path>
-                <path d="M12.19 27.43h1.52v1.52h-1.52Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M12.19 3.05h1.52v1.52h-1.52Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M9.14 28.95h3.05v1.53H9.14Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M9.14 1.52h3.05v1.53H9.14Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M6.09 27.43h3.05v1.52H6.09Z" fill="currentColor" stroke-width="1"></path>
-                <path d="m9.14 7.62 3.05 0 0 -3.05 -1.53 0 0 1.52 -4.57 0 0 1.53 1.53 0 0 1.52 1.52 0 0 -1.52z"
-                  fill="currentColor" stroke-width="1"></path>
-                <path d="M6.09 3.05h3.05v1.52H6.09Z" fill="currentColor" stroke-width="1"></path>
-                <path d="m6.09 24.38 0 1.52 4.57 0 0 1.53 1.53 0 0 -3.05 -3.05 0 0 -1.52 -1.52 0 0 1.52 -1.53 0z"
-                  fill="currentColor" stroke-width="1"></path>
-                <path d="M4.57 25.9h1.52v1.53H4.57Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M4.57 4.57h1.52v1.52H4.57Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M3.05 22.86h1.52v3.04H3.05Z" fill="currentColor" stroke-width="1"></path>
-                <path d="M3.05 6.09h1.52v3.05H3.05Z" fill="currentColor" stroke-width="1"></path>
-              </g>
-            </svg>
-          </a>
         </header>
         <p>
           This project is a simple webpage that demonstrates the structure of an HTML document along with CSS styling.
@@ -85,6 +59,9 @@
           <li>HTML</li>
           <li>CSS3</li>
         </ul>
+
+        <h3>Project Structure</h3>
+
         <h3>How to Use</h3>
         <p>
           To use this project, simply clone the repository and open the index.html file in your web browser.
@@ -92,17 +69,7 @@
         </p>
       </article>
       <section class="project-card" aria-labelledby="project-title">
-        <header class="project-card__header">
-          <h2 id="project-title" class="project-card__title">Name Project</h2>
-          <span class="description">
-            This is a brief description of the project.
-          </span>
-        <div class="info">
-            <span class="project-card__version">v1.0.0</span>
-            <span class="project-card__author">Author Name</span>
-        </div>
-        </header>
-        <div class="project-card__actions">
+                <div class="project-card__actions">
           <span class="project-card__watchers" style="display: flex; align-items: center; gap: 12px;">
             <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
               class="octicon octicon-eye mr-2">
@@ -118,7 +85,16 @@
           </button>
           <span id="like-count">0</span>
         </div>
-        <div class="project-card__languages">
+
+        <div class="tecnologies">
+          <span class="project-card__label">Technologies</span>
+          <ul class="tecnologies-list">
+            <li class="tecnology-item">HTML</li>
+            <li class="tecnology-item">CSS3</li>
+            <li class="tecnology-item">JavaScript</li> 
+          </ul>
+        </div>
+      <div class="project-card__languages">
           <span class="project-card__label">Languages</span>
           <ul class="language-list">
             <div id="langBar" class="lang-bar"></div>
@@ -132,7 +108,8 @@
       </section>
     </div>
   </div>
-  <script src="script/languages-bar.js"></script>
+  <script  type="module" src="script/languages-bar.js"></script>
+  <script type="module" src="script/file-tree.js"></script>
   <script type="module" src="script/like.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

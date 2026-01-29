@@ -373,7 +373,6 @@ body {
     flex-direction: column;
     gap: var(--space-sm);
     margin-top: var(--space-lg);
-    padding-top: var(--space-lg);
 }
 
 .project-card__label {
@@ -566,10 +565,6 @@ ion-icon {
     gap: 5px;
 }
 
-.tecnologies{
-    margin-bottom: var(--space-lg);
-}
-
 .tecnologies-list{
     list-style: none;
     padding: 10px 0;
@@ -578,11 +573,25 @@ ion-icon {
     gap: var(--space-sm);
 }
 
-.tecnology-item{
-    background-color: var(--pill-bg-soft);
-    border: 1px solid var(--pill-border-soft);
-    border-radius: var(--radius-pill);
-    padding: 4px 8px;
-    font-size: var(--fs-xs);
-    color: var(--text-soft);
+
+.tools {
+    display: flex;
+    flex-direction: column;
 }
+
+.tools-list{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: var(--space-sm);
+    padding: 0;
+}
+
+/* variações só na borda (bem elegante) */
+.tecnology-item.html { border-color: rgba(246,198,166,.9); }
+.tecnology-item.css  { border-color: rgba(220,233,201,.9); }
+.tecnology-item.js   { border-color: rgba(191,227,220,.9); }
+
+
+
+

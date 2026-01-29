@@ -59,9 +59,7 @@
           <li>HTML</li>
           <li>CSS3</li>
         </ul>
-
         <h3>Project Structure</h3>
-
         <h3>How to Use</h3>
         <p>
           To use this project, simply clone the repository and open the index.html file in your web browser.
@@ -69,8 +67,11 @@
         </p>
       </article>
       <section class="project-card" aria-labelledby="project-title">
+        <div class="">
+
+        </div>
                 <div class="project-card__actions">
-          <span class="project-card__watchers" style="display: flex; align-items: center; gap: 12px;">
+          <span class="project-card__watchers" styl e="display: flex; align-items: center; gap: 12px;">
             <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
               class="octicon octicon-eye mr-2">
               <path
@@ -89,9 +90,19 @@
         <div class="tecnologies">
           <span class="project-card__label">Technologies</span>
           <ul class="tecnologies-list">
-            <li class="tecnology-item">HTML</li>
-            <li class="tecnology-item">CSS3</li>
-            <li class="tecnology-item">JavaScript</li> 
+           <li class="tecnology-item html">HTML</li>
+<li class="tecnology-item css">CSS3</li>
+<li class="tecnology-item js">JavaScript</li>
+
+          </ul>
+        </div>
+        <div class="tools">
+          <span class="project-card__label">Tools</span>
+          <ul class="tools-list">
+            <li class="tool-item vscode">VS Code</li>
+            <li class="tool-item git">Git</li>
+            <li class="tool-item github">GitHub</li> 
+            <li class="tool-item supabase">Supabase</li>
           </ul>
         </div>
       <div class="project-card__languages">
@@ -103,16 +114,16 @@
         </div>
         <div class="project-card__release">
           <span class="project-card__label">Release</span>
-          <time datetime="2026-01-01" class="project-card__date">Jan 01, 2026</time>
+          <span>v1.0.0</span>
+          <a href="">Last release notes</a>
+          <span>Last updated: Jan 01, 2026</span>
         </div>
       </section>
     </div>
   </div>
   <script  type="module" src="script/languages-bar.js"></script>
-  <script type="module" src="script/file-tree.js"></script>
   <script type="module" src="script/like.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-
 </html>

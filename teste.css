@@ -126,7 +126,7 @@ body {
     box-shadow: var(--shadow-soft);
 }
 
-.about-project-content{
+.about-project-content {
     display: flex;
     gap: var(--space-lg);
 }
@@ -145,7 +145,7 @@ body {
     gap: 20px;
 }
 
-.header-actions{
+.header-actions {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -172,7 +172,7 @@ body {
 }
 
 
-.about-project-header .minimize{
+.about-project-header .minimize {
     background-color: var(--peach);
     border: 1px solid var(--peach);
 }
@@ -479,34 +479,34 @@ ion-icon {
    PROJECT STATUS BADGE
    ========================================================= */
 .project-status {
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-bold);
-  letter-spacing: 0.05em;
-  padding: 2px 6px;
-  border: 1px solid var(--accent);
-  border-radius: var(--radius-pill);
-  width: fit-content;
-  margin-top: 4px;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.05em;
+    padding: 2px 6px;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-pill);
+    width: fit-content;
+    margin-top: 4px;
 }
 
 /* Variantes */
 .status-active {
-  color: #166534;
-  background-color: rgba(22, 101, 52, 0.15);
-  padding: 5px;
-  font-size: var(--fs-xs);
+    color: #166534;
+    background-color: rgba(22, 101, 52, 0.15);
+    padding: 5px;
+    font-size: var(--fs-xs);
 }
 
 .status-progress {
-  background: rgba(245, 158, 11, 0.15);
-  color: #92400e;
-  border-color: #92400e;
+    background: rgba(245, 158, 11, 0.15);
+    color: #92400e;
+    border-color: #92400e;
 }
 
 .status-archived {
-  background: rgba(220, 38, 38, 0.12);
-  color: #7f1d1d;
-  border-color: #7f1d1d;
+    background: rgba(220, 38, 38, 0.12);
+    color: #7f1d1d;
+    border-color: #7f1d1d;
 }
 
 .project-links {
@@ -521,10 +521,10 @@ ion-icon {
     font-size: var(--fs-sm);
     font-weight: var(--fw-medium);
     color: var(--text);
-    padding: var(--space-sm) var(--space-md);   
+    padding: var(--space-sm) var(--space-md);
     border: 1px solid var(--accent);
     border-radius: var(--radius-pill);
-    transition: 
+    transition:
         background-color var(--transition-fast),
         color var(--transition-fast),
         border-color var(--transition-fast);
@@ -536,19 +536,19 @@ ion-icon {
     border-color: var(--accent);
 }
 
-.project-content{
+.project-content {
     display: flex;
     gap: var(--space-lg);
     background-color: bisque;
 }
 
-.project-card__title-status{
+.project-card__title-status {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.dot-status{
+.dot-status {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -565,7 +565,7 @@ ion-icon {
     gap: 5px;
 }
 
-.tecnologies-list{
+.tecnologies-list {
     list-style: none;
     padding: 10px 0;
     margin: 0;
@@ -579,7 +579,7 @@ ion-icon {
     flex-direction: column;
 }
 
-.tools-list{
+.tools-list {
     list-style: none;
     margin: 0;
     display: flex;
@@ -587,11 +587,31 @@ ion-icon {
     padding: 0;
 }
 
+.tecnology-item {
+    padding: var(--space-sm) var(--space-md);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-pill);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--text);
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
 /* variações só na borda (bem elegante) */
-.tecnology-item.html { border-color: rgba(246,198,166,.9); }
-.tecnology-item.css  { border-color: rgba(220,233,201,.9); }
-.tecnology-item.js   { border-color: rgba(191,227,220,.9); }
+.tecnology-item.html {
+    border-color: rgba(246, 198, 166, .9);
+    background-color: rgba(246, 198, 166, .2);
+}
 
+.tecnology-item.css {
+    border-color: rgba(220, 233, 201, .9);
+    background-color: rgba(220, 233, 201, .2);
+}
 
-
-
+.tecnology-item.js {
+    border-color: rgba(191, 227, 220, .9);
+    background-color: rgba(191, 227, 220, .2);
+}

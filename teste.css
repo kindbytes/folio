@@ -40,12 +40,12 @@
     --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
 
     /* Tipografia */
-    --fs-xs: 0.70rem;
-    --fs-sm: 0.80rem;
-    --fs-md: 0.88rem;
-    --fs-lg: 1.05rem;
-    --fs-xl: 1.25rem;
-    --fs-name: 1.40rem;
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.90rem;
+    --fs-md: 1rem;
+    --fs-lg: 1.2rem;
+    --fs-xl: 1.4rem;
+    --fs-name: 1.6rem;
 
     --lh-tight: 1.3;
     --lh-normal: 1.5;
@@ -107,6 +107,7 @@ body {
     line-height: var(--lh-normal);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: var(--text);
 }
 
 /* =========================================================
@@ -210,7 +211,7 @@ body {
 }
 
 .readme h2 {
-    font-size: var(--fs-lg);
+    font-size: var(--fs-xl);
     font-weight: var(--fw-bold);
     line-height: var(--lh-tight);
     margin: var(--space-md) 0;
@@ -218,7 +219,7 @@ body {
 }
 
 .readme h3 {
-    font-size: var(--fs-md);
+    font-size: var(--fs-lg);
     font-weight: var(--fw-medium);
     line-height: var(--lh-tight);
     margin: var(--space-lg) 0 var(--space-sm) 0;
@@ -269,6 +270,13 @@ body {
     margin: 0;
     color: var(--text);
     line-height: var(--lh-tight);
+}
+
+.description {
+    font-size: var(--fs-sm);
+    color: var(--text-soft);
+    line-height: var(--lh-relaxed);
+    display: block;
 }
 
 .project-card__version,
@@ -479,9 +487,11 @@ ion-icon {
    PROJECT STATUS BADGE
    ========================================================= */
 .project-status {
-    font-size: var(--fs-xs);
+    font-family: 'Sono', sans-serif;
+    font-size: var(--fs-sm);
     font-weight: var(--fw-bold);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
     padding: 2px 6px;
     border: 1px solid var(--accent);
     border-radius: var(--radius-pill);
@@ -494,7 +504,6 @@ ion-icon {
     color: #166534;
     background-color: rgba(22, 101, 52, 0.15);
     padding: 5px;
-    font-size: var(--fs-xs);
 }
 
 .status-progress {
@@ -557,8 +566,11 @@ ion-icon {
 }
 
 .status-activee {
-    font-size: var(--fs-xs);
+    font-family: 'Sono', sans-serif;
+    font-size: var(--fs-sm);
     font-weight: var(--fw-bold);
+    letter-spacing: 0.02em;
+    line-height: 1.2;
     color: #16a34a;
     display: flex;
     align-items: center;
@@ -587,31 +599,22 @@ ion-icon {
     padding: 0;
 }
 
-.tecnology-item {
-    padding: var(--space-sm) var(--space-md);
-    border: 2px solid var(--accent);
-    border-radius: var(--radius-pill);
-    font-size: var(--fs-sm);
-    font-weight: var(--fw-medium);
-    color: var(--text);
-    transition:
-        background-color var(--transition-fast),
-        border-color var(--transition-fast),
-        color var(--transition-fast);
+
+
+.tecnology-item, .tool-item {
+   background: #F6F5EE;
+  color: #2E3440;
+  border: 1px solid #999999;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 500;
 }
 
-/* variações só na borda (bem elegante) */
-.tecnology-item.html {
-    border-color: rgba(246, 198, 166, .9);
-    background-color: rgba(246, 198, 166, .2);
+.quick-facts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
 }
 
-.tecnology-item.css {
-    border-color: rgba(220, 233, 201, .9);
-    background-color: rgba(220, 233, 201, .2);
-}
-
-.tecnology-item.js {
-    border-color: rgba(191, 227, 220, .9);
-    background-color: rgba(191, 227, 220, .2);
-}

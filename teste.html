@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,10 +28,10 @@
             This is a brief description of the project.
           </span8>
           <div class="info">
-            <div class="status-info">
-              <span class="project-status status-active">Frontend</span>
-              <span class="project-status status-maintained">UI</span>
-              <span class="project-status status-archived">Study</span>
+            <div class=" ">
+              <span class="">Frontend</span>
+              <span class="">UI</span>
+              <span class="">Study</span>
             </div>
             <div class="info__item">
               <span class="project-card__version">v1.0.0</span>
@@ -69,13 +68,23 @@
       </article>
       <section class="project-card" aria-labelledby="project-title">
         <div class="quick-facts">
-          <span>Status: Active</span>
+          <span>
+            <span class="status-label">Project Status</span>
+              <!-- TEXTO PRINCIPAL -->
+  <div class="project-status">
+   <span id="project-status">Ongoing</span>
+  </div>
+
+  <!-- LISTA DE STATUS -->
+  <ul class="status-list">
+    <li class="status-item ongoing is-active">Ongoing</li>
+    <li class="status-item stable">Stable</li>
+    <li class="status-item completed">Completed</li>
+  </ul>
+          </span>
           <span>Quick Facts</span>
           <span>Version: 1.0.0</span>
           <span>License: MIT</span>
-          <span>Progress:
-            <progress value="70" max="100">70%</progress>
-          </span>
           <span></span>
         </div>
 

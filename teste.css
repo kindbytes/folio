@@ -499,6 +499,14 @@ ion-icon {
     margin-top: 4px;
 }
 
+.status-item{
+}
+
+.status-item.stable{
+
+}
+
+
 /* Variantes */
 .status-active {
     color: #166534;
@@ -602,10 +610,10 @@ ion-icon {
 
 
 .tecnology-item, .tool-item {
-   background: #F6F5EE;
+  background: #F3EBC8;
   color: #2E3440;
-  border: 1px solid #999999;
-  border-radius: 6px;
+  border: 1px solid #E1D8A8;
+  border-radius: 3px;
   padding: 4px 10px;
   font-size: 13px;
   font-weight: 500;

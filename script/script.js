@@ -92,3 +92,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+
+// Pegamos o texto principal onde o status aparece
+const projectStatusText = document.getElementById('project-status');
+
+// Pegamos todos os itens de status da lista
+const statusItems = document.querySelectorAll('.status-item');
+
+// Para cada item da lista de status...
+statusItems.forEach(function (statusItem) {
+
+  // Quando esse item for clicado...
+  statusItem.addEventListener('click', function () {
+
+    // Primeiro: removemos a classe ativa de TODOS os status
+    statusItems.forEach(function (itemToRemove) {
+      itemToRemove.classList.remove('is-active');
+    });
+
+    // Depois: adicionamos a classe ativa somente no clicado
+    statusItem.classList.add('is-active');
+
+    // Atualizamos o texto principal com o texto do status clicado
+    projectStatusText.textContent = statusItem.textContent;
+  });
+
+});

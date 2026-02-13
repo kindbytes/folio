@@ -31,17 +31,12 @@
     --pill-bg-soft: #ffffff;
     --pill-border-soft: rgba(0, 0, 0, 0.18);
 
-    /* Feedback / estados */
-    --success: #16a34a;
-    --warning: #f59e0b;
-    --danger: #dc2626;
-
     /* Sombras */
     --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
 
     /* Tipografia */
     --fs-xs: 0.75rem;
-    --fs-sm: 0.90rem;
+    --fs-sm: 12px;
     --fs-md: 1rem;
     --fs-lg: 1.2rem;
     --fs-xl: 1.4rem;
@@ -77,7 +72,7 @@
     --header-height: 2.5rem;
 
     /* Apoio visual */
-    --peach: #FCB078;
+    --peach: #fccfaa;
     /* HTML */
     --rose: #DA8FA3;
     /* tabs ativas */
@@ -85,6 +80,9 @@
     /* badges / JS */
     --sage: #CDE0AE;
     /* tools / CSS */
+
+
+
 }
 
 
@@ -250,7 +248,8 @@ body {
     flex-direction: column;
     border-radius: var(--radius-card);
     padding: var(--space-lg);
-    border-left: 1px solid var(--border-subtle);
+    border-left: 1px solid var(--accent);
+    gap: 15px;
 }
 
 /* Header */
@@ -416,17 +415,17 @@ body {
 }
 
 .lang-html {
-    background: #FCB078;
+    background: var(--peach);
     border-right: 1px solid var(--accent);
 }
 
 .lang-css {
-    background: #CDE0AE;
+    background: #c5da81;
     border-right: 1px solid var(--accent);
 }
 
 .lang-javascript {
-    background: #A3D2CA;
+    background: #aae5cc;
 }
 
 /* List */
@@ -470,7 +469,7 @@ body {
 .dot {
     width: 10px;
     height: 10px;
-    border-radius: 3px;
+    border-radius: 50%;
     border: 1px solid var(--accent);
 }
 
@@ -486,45 +485,26 @@ ion-icon {
 /* =========================================================
    PROJECT STATUS BADGE
    ========================================================= */
-.project-status {
-    font-family: 'Sono', sans-serif;
+.project-status-container {
+    display: flex;
     font-size: var(--fs-sm);
-    font-weight: var(--fw-bold);
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-    padding: 2px 6px;
     border: 1px solid var(--accent);
-    border-radius: var(--radius-pill);
     width: fit-content;
-    margin-top: 4px;
+    border-radius: var(--radius-pill);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
 }
 
-.status-item{
-}
-
-.status-item.stable{
-
-}
-
-
-/* Variantes */
-.status-active {
-    color: #166534;
-    background-color: rgba(22, 101, 52, 0.15);
+.status-label {
     padding: 5px;
+    color: var(--accent);
 }
 
-.status-progress {
-    background: rgba(245, 158, 11, 0.15);
-    color: #92400e;
-    border-color: #92400e;
+.project-status {
+    padding: 5px;
+    border-left: 1px solid var(--accent);
 }
 
-.status-archived {
-    background: rgba(220, 38, 38, 0.12);
-    color: #7f1d1d;
-    border-color: #7f1d1d;
-}
 
 .project-links {
     display: flex;
@@ -565,25 +545,6 @@ ion-icon {
     gap: 10px;
 }
 
-.dot-status {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #16a34a;
-    display: inline-block;
-}
-
-.status-activee {
-    font-family: 'Sono', sans-serif;
-    font-size: var(--fs-sm);
-    font-weight: var(--fw-bold);
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-    color: #16a34a;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
 
 .tecnologies-list {
     list-style: none;
@@ -609,14 +570,15 @@ ion-icon {
 
 
 
-.tecnology-item, .tool-item {
-  background: #F3EBC8;
-  color: #2E3440;
-  border: 1px solid #E1D8A8;
-  border-radius: 3px;
-  padding: 4px 10px;
-  font-size: 13px;
-  font-weight: 500;
+.tecnology-item,
+.tool-item {
+    background-color: #e6fbad;
+    color: #000000;
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 .quick-facts {
@@ -626,3 +588,119 @@ ion-icon {
     margin-top: var(--space-lg);
 }
 
+.info-tags {
+    font-size: 12px;
+}
+
+.info-tag-frontend {
+    background-color: #fccfaa;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid var(--accent);
+}
+
+.info-tag-ui {
+    background-color: #c5da81;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid var(--accent);
+}
+
+.info-tag-study {
+    background-color: #aae5cc;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid var(--accent);
+}
+
+
+.commits-timeline {
+    font-size: var(--fs-sm);
+}
+
+/* ===== TIMELINE CONTAINER ===== */
+.commits-timeline {
+    margin-top: 24px;
+}
+
+.timeline-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* ===== TIMELINE ===== */
+.timeline {
+    position: relative;
+    display: grid;
+    gap: 16px;
+    padding-left: 2px;
+}
+
+/* linha vertical */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+/* ===== ITEM ===== */
+.timeline-item {
+    display: grid;
+    grid-template-columns: 12px 1fr;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+/* ===== MARKER (bolinha) ===== */
+.timeline-marker {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 4px;
+    background: #CDE0AE;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+
+
+/* ===== CONTEÚDO ===== */
+.timeline-content {
+    display: grid;
+    gap: 4px;
+}
+
+.timeline-date {
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+.timeline-type {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* tipos (opcional diferenciar) */
+.timeline-type.layout {
+    color: #6B6E64;
+}
+
+.timeline-type.performance {
+    color: #8A6E5A;
+}
+
+.timeline-description {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: 0.85;
+}

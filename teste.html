@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="teste.css">
   <title>Project</title>
 </head>
+
 <body>
   <div class="about-project">
     <div class="about-project-header">
@@ -28,10 +30,10 @@
             This is a brief description of the project.
           </span8>
           <div class="info">
-            <div class=" ">
-              <span class="">Frontend</span>
-              <span class="">UI</span>
-              <span class="">Study</span>
+            <div class="info-tags">
+              <span class="info-tag-frontend">Frontend</span>
+              <span class="info-tag-ui">UI</span>
+              <span class="info-tag-study">Study</span>
             </div>
             <div class="info__item">
               <span class="project-card__version">v1.0.0</span>
@@ -41,7 +43,7 @@
           </div>
         </header>
         <header class="readme-header">
-          <h2 id="readme-title">Readme</h2>
+
         </header>
         <p>
           This project is a simple webpage that demonstrates the structure of an HTML document along with CSS styling.
@@ -54,12 +56,6 @@
           <li>Table displaying project folder structure</li>
           <li>Readme section with project description and features</li>
         </ul>
-        <h3>Technologies Used</h3>
-        <ul class="tecnologies-badge">
-          <li>HTML</li>
-          <li>CSS3</li>
-        </ul>
-        <h3>Project Structure</h3>
         <h3>How to Use</h3>
         <p>
           To use this project, simply clone the repository and open the index.html file in your web browser.
@@ -68,25 +64,17 @@
       </article>
       <section class="project-card" aria-labelledby="project-title">
         <div class="quick-facts">
-          <span>
-            <span class="status-label">Project Status</span>
-              <!-- TEXTO PRINCIPAL -->
-  <div class="project-status">
-   <span id="project-status">Ongoing</span>
-  </div>
-
-  <!-- LISTA DE STATUS -->
-  <ul class="status-list">
-    <li class="status-item ongoing is-active">Ongoing</li>
-    <li class="status-item stable">Stable</li>
-    <li class="status-item completed">Completed</li>
-  </ul>
-          </span>
-          <span>Quick Facts</span>
-          <span>Version: 1.0.0</span>
-          <span>License: MIT</span>
-          <span></span>
+          <!-- TEXTO PRINCIPAL -->
+          <div class="project-status-container">
+            <span class="status-label">Status</span>
+            <span class="project-status">Ongoing</span>
+          </div>
         </div>
+        <div>
+          <h3>Updates Timeline</h3>
+          <div class="timeline" id="timeline"></div>
+        </div>
+
 
         <div class="tecnologies">
           <span class="project-card__label">Technologies</span>
@@ -114,17 +102,15 @@
           </ul>
         </div>
         <div class="project-card__release">
-          <span class="project-card__label">Release</span>
-          <span>v1.0.0</span>
-          <a href="">Last release notes</a>
-          <span>Last updated: Jan 01, 2026</span>
         </div>
       </section>
     </div>
   </div>
   <script type="module" src="script/languages-bar.js"></script>
   <script type="module" src="script/like.js"></script>
+  <script type="module" src="script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

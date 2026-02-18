@@ -120,7 +120,7 @@ body {
     gap: 0;
     border: 2px solid var(--accent);
     border-radius: var(--radius-card);
-    background-color: var(--bg);
+    background-color: #feffef;
     color: var(--text-muted);
     box-shadow: var(--shadow-soft);
 }
@@ -183,7 +183,6 @@ body {
 .readme-container {
     display: flex;
     width: 100%;
-    padding: var(--space-md);
     gap: var(--space-md);
 }
 
@@ -503,6 +502,7 @@ ion-icon {
 .project-status {
     padding: 5px;
     border-left: 1px solid var(--accent);
+    background-color: #f0e39f;
 }
 
 
@@ -572,12 +572,12 @@ ion-icon {
 
 .tecnology-item,
 .tool-item {
-    background-color: #e6fbad;
+    background-color: #fff3cb;
     color: #000000;
     border: 1px solid var(--accent);
     border-radius: 3px;
     padding: 4px 10px;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 500;
 }
 
@@ -593,21 +593,21 @@ ion-icon {
 }
 
 .info-tag-frontend {
-    background-color: #fccfaa;
+    background-color: #f0e39f;
     padding: 5px;
     border-radius: 3px;
     border: 1px solid var(--accent);
 }
 
 .info-tag-ui {
-    background-color: #c5da81;
+    background-color: #c9d89f;
     padding: 5px;
     border-radius: 3px;
     border: 1px solid var(--accent);
 }
 
 .info-tag-study {
-    background-color: #aae5cc;
+    background-color: #abd2ef;
     padding: 5px;
     border-radius: 3px;
     border: 1px solid var(--accent);
@@ -703,4 +703,9 @@ ion-icon {
     font-size: 12px;
     line-height: 1.4;
     opacity: 0.85;
+}
+
+.timeline-container h3 {
+    margin-top: var(--space-lg);
+    font-size: var(--fs-sm);
 }

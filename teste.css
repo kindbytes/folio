@@ -141,6 +141,14 @@ body {
     border-bottom: 2px solid var(--accent);
 }
 
+.header-title {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
 .header-actions {
     display: flex;
     align-items: center;
@@ -148,8 +156,8 @@ body {
 }
 
 .header-actions span {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     background-color: var(--accent);
     border-radius: 50%;
     display: inline-block;
@@ -209,8 +217,8 @@ body {
     color: var(--text);
 }
 
-.readme h3 {
-    font-size: var(--fs-lg);
+.readme-container h3 {
+    font-size: var(--fs-md);
     font-weight: var(--fw-medium);
     line-height: var(--lh-tight);
     margin: var(--space-lg) 0 var(--space-sm) 0;
@@ -238,7 +246,6 @@ body {
     display: flex;
     width: 100%;
     flex-direction: column;
-    border-radius: var(--radius-card);
     padding: var(--space-lg);
     border-left: 1px solid var(--accent);
     gap: 18px;
@@ -257,7 +264,7 @@ body {
 }
 
 .project-card__title {
-    font-size: var(--fs-name);
+    font-size: var(--fs-md);
     font-weight: var(--fw-bold);
     margin: 0;
     color: var(--text);
@@ -366,7 +373,7 @@ body {
    LABELS (LANGUAGES / WORKFLOW / UPDATES)
    ========================================================= */
 .project-card__label,
-.timeline-container {
+.timeline-container h3 {
     font-size: 11px;
     font-weight: var(--fw-bold);
     color: var(--text-muted);

@@ -91,7 +91,7 @@ button,
 =========================== */
 
 .layout {
-  max-width: 980px;
+  max-width: 970px;
   width: 100%;
   background: var(--bg);
   border-radius: var(--radius-card);

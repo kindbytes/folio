@@ -4,7 +4,7 @@ import { owner, repo } from "./github-config.js";
 fetch(`https://api.github.com/repos/${owner}/${repo}/languages`)
   .then(r => r.json())
   .then(data => {
-    const total = Object.values(data).reduce((a,b)=>a+b,0);
+    const total = Object.values(data).reduce((a, b) => a + b, 0);
 
     const bar = document.getElementById("langBar");
     const list = document.getElementById("langList");

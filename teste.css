@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-
 /* =========================================================
    CSS VARIABLES
    ========================================================= */
@@ -53,7 +52,8 @@
     /* Radius */
     --radius-card: 3px;
     --radius-soft: 3px;
-    --radius-pill: 3px;
+    --radius-pill: 999px;
+    /* pill de verdade */
 
     /* Transições */
     --transition-fast: 0.2s ease;
@@ -80,11 +80,7 @@
     /* badges / JS */
     --sage: #CDE0AE;
     /* tools / CSS */
-
-
-
 }
-
 
 /* =========================================================
    RESET / BASE
@@ -106,6 +102,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: var(--text);
+    letter-spacing: -0.01em;
+    /* JetBrains mais refinada */
 }
 
 /* =========================================================
@@ -141,7 +139,6 @@ body {
     padding: var(--space-sm) var(--space-md);
     background-color: #FFFFF0;
     border-bottom: 2px solid var(--accent);
-    gap: 20px;
 }
 
 .header-actions {
@@ -170,12 +167,10 @@ body {
     border: 1px solid var(--rose);
 }
 
-
 .about-project-header .minimize {
     background-color: var(--peach);
     border: 1px solid var(--peach);
 }
-
 
 /* =========================================================
    LAYOUT (README + PROJECT CARD)
@@ -185,7 +180,6 @@ body {
     width: 100%;
     gap: var(--space-md);
 }
-
 
 /* =========================================================
    README (LEFT)
@@ -237,7 +231,6 @@ body {
     margin: 0.3rem 0;
 }
 
-
 /* =========================================================
    PROJECT CARD (RIGHT)
    ========================================================= */
@@ -248,7 +241,8 @@ body {
     border-radius: var(--radius-card);
     padding: var(--space-lg);
     border-left: 1px solid var(--accent);
-    gap: 15px;
+    gap: 18px;
+    /* mais consistente */
 }
 
 /* Header */
@@ -304,7 +298,7 @@ body {
     margin-top: var(--space-lg);
 }
 
-/* Small info row (version + author, etc) */
+/* Small info row */
 .info {
     display: flex;
     flex-direction: column;
@@ -312,7 +306,7 @@ body {
 }
 
 /* =========================================================
-   ACTIONS (LIKE / STAR / ETC)
+   ACTIONS
    ========================================================= */
 .project-card__actions {
     display: flex;
@@ -333,7 +327,6 @@ body {
     align-items: center;
     gap: 6px;
 }
-
 
 /* =========================================================
    LIKE BUTTON (HEART TOGGLE)
@@ -357,7 +350,6 @@ body {
         transform var(--transition-fast);
 }
 
-/* coração cheio escondido por padrão */
 .project-card__button ion-icon[name="heart"] {
     display: none;
 }
@@ -370,6 +362,22 @@ body {
     display: none;
 }
 
+/* =========================================================
+   LABELS (LANGUAGES / WORKFLOW / UPDATES)
+   ========================================================= */
+.project-card__label,
+.timeline-container {
+    font-size: 11px;
+    font-weight: var(--fw-bold);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: var(--lh-tight);
+    opacity: 0.65;
+    margin-bottom: 10px;
+}
+
+
 
 /* =========================================================
    LANGUAGES
@@ -377,19 +385,8 @@ body {
 .project-card__languages {
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
-    margin-top: var(--space-lg);
-}
-
-.project-card__label {
-    font-size: var(--fs-xs);
-    font-weight: var(--fw-bold);
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    line-height: var(--lh-tight);
-    align-self: flex-start;
-    margin-bottom: var(--space-sm);
+    gap: 8px;
+    margin-top: 0;
 }
 
 .project-card__date {
@@ -436,21 +433,22 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    gap: 5px;
+    gap: 6px;
 }
 
 .lang-list {
-    gap: 5px;
-    font-size: var(--fs-sm);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, auto));
+    gap: 6px;
+    font-size: 11px;
     line-height: var(--lh-normal);
 }
 
 .lang-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-    font-size: var(--fs-sm);
+    gap: 6px;
+    font-size: 11px;
     line-height: var(--lh-normal);
     color: var(--text-soft);
 }
@@ -461,7 +459,7 @@ body {
     gap: 6px;
     font-weight: var(--fw-medium);
     color: var(--text);
-    font-size: var(--fs-sm);
+    font-size: 11px;
 }
 
 /* bolinha */
@@ -472,40 +470,45 @@ body {
     border: 1px solid var(--accent);
 }
 
-
 /* =========================================================
-   ICONS
-   ========================================================= */
-ion-icon {
-    font-size: 1.2rem;
-    transition: transform 0.2s ease;
-}
-
-/* =========================================================
-   PROJECT STATUS BADGE
+   PROJECT STATUS BADGE (com dot)
    ========================================================= */
 .project-status-container {
     display: flex;
-    font-size: var(--fs-sm);
+    font-size: 10.5px;
+    letter-spacing: -0.01em;
     border: 1px solid var(--accent);
     width: fit-content;
     border-radius: var(--radius-pill);
     font-family: 'JetBrains Mono', monospace;
     font-weight: 600;
+    overflow: hidden;
 }
 
 .status-label {
-    padding: 5px;
+    padding: 6px 10px;
     color: var(--accent);
 }
 
 .project-status {
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
     border-left: 1px solid var(--accent);
     background-color: #f0e39f;
 }
 
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background-color: #22c55e;
+}
 
+/* =========================================================
+   LINKS
+   ========================================================= */
 .project-links {
     display: flex;
     gap: 10px;
@@ -536,7 +539,7 @@ ion-icon {
 .project-content {
     display: flex;
     gap: var(--space-lg);
-    background-color: bisque;
+    background-color: transparent;
 }
 
 .project-card__title-status {
@@ -545,7 +548,9 @@ ion-icon {
     gap: 10px;
 }
 
-
+/* =========================================================
+   TECHNOLOGIES / TOOLS
+   ========================================================= */
 .tecnologies-list {
     list-style: none;
     padding: 10px 0;
@@ -553,7 +558,6 @@ ion-icon {
     display: flex;
     gap: var(--space-sm);
 }
-
 
 .tools {
     display: flex;
@@ -568,19 +572,23 @@ ion-icon {
     padding: 0;
 }
 
-
-
 .tecnology-item,
 .tool-item {
     background-color: #fff3cb;
     color: #000000;
     border: 1px solid var(--accent);
     border-radius: 3px;
-    padding: 4px 10px;
-    font-size: 11px;
+    padding: 3px 8px;
+    /* ↓ menor */
+    font-size: 10.5px;
+    /* ↓ menor p/ JetBrains */
     font-weight: 500;
+    opacity: 0.9;
 }
 
+/* =========================================================
+   QUICK FACTS
+   ========================================================= */
 .quick-facts {
     display: flex;
     flex-direction: column;
@@ -592,50 +600,53 @@ ion-icon {
     font-size: 12px;
 }
 
+.info-tag-frontend,
+.info-tag-ui,
+.info-tag-study {
+    padding: 2px 6px;
+    /* antes 5px */
+    font-size: 10px;
+    /* antes 12px */
+    border-radius: 4px;
+    /* levemente mais suave */
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    /* menos pesado */
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
 .info-tag-frontend {
     background-color: #f0e39f;
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid var(--accent);
+    opacity: 0.9;
 }
 
 .info-tag-ui {
     background-color: #c9d89f;
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid var(--accent);
+    opacity: 0.9;
 }
 
 .info-tag-study {
     background-color: #abd2ef;
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid var(--accent);
+    opacity: 0.9;
 }
 
 
+
+
+/* =========================================================
+   TIMELINE (mais discreto)
+   ========================================================= */
 .commits-timeline {
-    font-size: var(--fs-sm);
+    margin-top: 0;
+    font-size: 11px;
+    line-height: 1.4;
+    opacity: 0.78;
 }
 
-/* ===== TIMELINE CONTAINER ===== */
-.commits-timeline {
-    margin-top: 24px;
-}
-
-.timeline-title {
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-}
-
-/* ===== TIMELINE ===== */
 .timeline {
     position: relative;
     display: grid;
-    gap: 16px;
+    gap: 14px;
     padding-left: 2px;
 }
 
@@ -647,7 +658,7 @@ ion-icon {
     top: 0;
     bottom: 0;
     width: 1px;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.06);
     z-index: 1;
 }
 
@@ -661,16 +672,14 @@ ion-icon {
 
 /* ===== MARKER (bolinha) ===== */
 .timeline-marker {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-top: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    margin-top: 5px;
     background: #CDE0AE;
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     z-index: 2;
 }
-
-
 
 /* ===== CONTEÚDO ===== */
 .timeline-content {
@@ -679,15 +688,16 @@ ion-icon {
 }
 
 .timeline-date {
-    font-size: 11px;
-    opacity: 0.6;
+    font-size: 10px;
+    opacity: 0.5;
 }
 
 .timeline-type {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    opacity: 0.75;
 }
 
 /* tipos (opcional diferenciar) */
@@ -700,12 +710,15 @@ ion-icon {
 }
 
 .timeline-description {
-    font-size: 12px;
-    line-height: 1.4;
-    opacity: 0.85;
+    font-size: 10.5px;
+    line-height: 1.35;
+    opacity: 0.65;
 }
 
-.timeline-container h3 {
-    margin-top: var(--space-lg);
-    font-size: var(--fs-sm);
+/* =========================================================
+   ICONS
+   ========================================================= */
+ion-icon {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
 }
